@@ -1,5 +1,4 @@
 Projekt #02: Der Pizza-Service
-==============================
 
 Es soll ein Pizza-Service im Web zur Verfügung stehen. Dort kann man als Kunde
 Standardpizzen oder individuelle Kreationen bestellen. Bei jeder Bestellung wird
