@@ -10,9 +10,20 @@ Jedem Kunden muss der Rechnungsbetrag gezeigt werden.
 TODO
 ====
 
+
+step two
+--------
+
+- Treffen am Mittwoch mit Pizza backen!
+- Besprechung User-Stories
+- Namensfindung
+- Wireframes
+- Clickflow
+
+
 step one
 --------
 
-- user stories
-- wireframes
-- clickflow
+- user stories 	[x]  
+- wireframes	[ ] 
+- clickflow		[ ]
