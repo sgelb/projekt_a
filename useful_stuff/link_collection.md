@@ -7,12 +7,13 @@ Grundlegende Einführung
 Alle Ruby on Rails Guides
 - http://edgeguides.rubyonrails.org/
 
-Wikibooks
+Zusammenhang von models, controllers und views
+- http://www.gentlerobot.se/innerrobotics/wp-content/uploads/2010/07/45.png
+
+Wikibooks (leider beide mindestens in Teilen veraltet)
 - https://de.wikibooks.org/wiki/Websiteentwicklung:_Ruby_on_Rails
 - https://de.wikibooks.org/wiki/Ruby_on_Rails
 
-Zusammenhang von models, controllers und views
-- http://www.gentlerobot.se/innerrobotics/wp-content/uploads/2010/07/45.png
 
 Git
 ===
@@ -27,6 +28,8 @@ git-workflow
 - http://nvie.com/posts/a-successful-git-branching-model/
 - http://vinsol.com/blog/2009/07/24/git-work-flow-for-rails-developers/
 
+Guidelines
+- http://www.lullabot.com/articles/git-best-practices-workflow-guidelines
 
 Markdown
 ========

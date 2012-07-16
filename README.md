@@ -29,6 +29,7 @@ Konkrete Projektarbeit:
 - Grober Strukturplan
 - Arbeitsverteilung
 - Grober Zeitplan
+- Heroku?
 
 TODO
 ====
