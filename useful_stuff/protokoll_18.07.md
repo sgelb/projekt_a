@@ -17,7 +17,7 @@ Kommunikations-Vereinbarung
 - Wiki/Forum (nicht public, Feedback, Diskussion, Ideen, ...)
 
 TODO:
-- Forum einrichten und Adr. mitteilen
+- Forum http://prg.bplaced.net/  (Jan)
 		
 Wireframes
 ---------------------
@@ -25,7 +25,7 @@ Wireframes
 - Erste Ueberlegungen fuer Wireframes auf Papier (Head, Navi, Content, Footer)
 
 TODO:
-- Weitere Diskussion fuer Festlegung der Frames folgt.
+- Weitere Diskussion fuer Festlegung der Frames folgt. (Leene, Sk)
 
 
 Ideen
@@ -43,7 +43,7 @@ Vorbereitung fuer naechstes Treffen:
 ---------------------
 - Wireframes
 - Clickflow 
-- Ruby on Rails (erste Schritte)
+- Ruby on Rails (erste Schritte) 
 	
 
 Naechstes Treffen
