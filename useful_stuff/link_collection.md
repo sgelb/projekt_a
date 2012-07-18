@@ -25,6 +25,9 @@ Namenskonventionen
 klein klein
 - http://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/
 
+Youtube
+- http://www.youtube.com/watch?v=c4cwuuJWbhQ (Einstieg in Rails)
+
 Git
 ===
 
