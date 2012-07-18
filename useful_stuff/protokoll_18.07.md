@@ -1,21 +1,55 @@
-Protokoll - 18.07.2012
+Protokoll - 18.07.2012 - Gruppe vollst. anwesend
 ====================
-
 
 Fertigstellung von User-Stories
 ---------------------
 - Prioritäten Festlegung
 - Konkretisierung von einzelnen Stories
 - Auswahl von User-Stories
+
+Ergebnis:
+- Konkrete User-Stories ausgewählt und nach Wichtigkeit sortiert (siehe GitHub)
 	
+
+Kommunikations-Vereinbarung
+---------------------
+- GitHub (Code, ...)
+- Wiki/Forum (nicht public, Feedback, Diskussion, Ideen, ...)
+
+TODO:
+- Forum einrichten und Adr. mitteilen
 		
+Wireframes
+---------------------
+- Recherche: Webprasesens vorhandener Lieferdienste
+- Erste Ueberlegungen fuer Wireframes auf Papier (Head, Navi, Content, Footer)
+
+TODO:
+- Weitere Diskussion fuer Festlegung der Frames folgt.
+
+
 Ideen
 ---------------------
-
 Mehrere Front-Ends
-- Admin (Zutaten bearbeiten, ...)
-- Mitarbeiter (Zu bearbeitende Bestellungen als Liste Darstellen, ...)
+- Endkunden (Eigentliche Online präsens)
+- Admin (Produkte bearbeiten, ...)
+- Mitarbeiter (Bearbeitung eingehender Bestellungen, ...)
 	
-Warenkorb
-- stetige Anzeige	
+Warenkorb Endkunden-Ansicht
+- stetige Anzeige (nice to have)	
+
+
+Vorbereitung fuer naechstes Treffen:
+---------------------
+- Wireframes
+- Clickflow 
+- Ruby on Rails (erste Schritte)
 	
+
+Naechstes Treffen
+---------------------
+- Wann? 
+20.07.2012, 14h
+
+- Wo? 
+Skype
