@@ -1,3 +1,6 @@
+git ist cool. Und git hilft euch: es wimmelt in vielen
+Ausgaben an konkreten Hilfestellungen, gerade, wenn etwas nicht funktioniert.
+
 Einfacher workflow
 ==================
 
@@ -87,14 +90,25 @@ Wollt ihr commiten und merkt, dass ihr eine Datei bereits geadded habt, die ihr
 eigentlich in einen eigenen commit packen wolltet, dann unstaged sie einfach.
 Die Datei wird dabei nicht verändert.
 
-    git reset HEAD dateiname
+    git reset HEAD pfad/zur/dateiname
 
 Und was, wenn ihr schon in der Datei gearbeitet habt und sie in den Zustand des
 letzten commits zurückversetzen wollt? Auch kein Problem. Aber vorsicht, alle
 Änderungen an der Datei seit dem letzten commit sind futsch!
 
-    git checkout -- dateiname
+    git checkout -- pfad/zur/dateiname
 
+Und was, wenn die Datei in nem alten commit liegt? Dann nehmt anstelle der -- den revision key (das ist diese Zahlen-/Buchstabenkombi, der ihr des öfteren begegnet) des betreffenden commits. 
+
+    git checkout 61e4589 pfad/zur/dateiname
+
+git ist, was die Angabe des revision keys angeht, recht flexibel. In der Regel kann man das auch in Relation zum aktuellen Stand machen. Hier wollen wir die Datei aus dem vorletzten Commit haben:
+
+    git checkout HEAD~2 pfad/zur/dateiname
+
+Aber wie sah die Datei denn im vorletzten commit überhaupt aus:
+
+    git show HEAD~2:pfad/zur/dateiname
 
 Zu github und zurück
 --------------------
