@@ -21,6 +21,8 @@ Strukturelle Vorarbeit:
 - git/github-workflow überlegen: branches etcpp
 - Wie kommunizieren wir?
 - Code-/Datei-/Wasauchimmer-Konventionen (zB: Ordner klein und ohne Leerzeichen)
+- Dokumentation von allem
+- Kommunikation mit B.
 
 Konkrete Projektarbeit:
 
@@ -37,6 +39,6 @@ TODO
 step one - abnahme von b.
 -------------------------
 
-- user stories 	[x]  
+- user stories 	[x] 
 - wireframes	[ ] 
 - clickflow		[ ]
