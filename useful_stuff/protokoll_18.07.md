@@ -1,4 +1,4 @@
-18.07.2012 - project_a - Protokoll
+Protokoll - 18.07.2012
 ====================
 
 
