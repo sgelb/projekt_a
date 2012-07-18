@@ -48,7 +48,11 @@ einfachere Weg ist merge:
     git merge development
 
 Sollten hierbei Konflikte auftreten, sagt git euch das. In den problematische
-Dateien sind die Stellen markiert:
+Dateien sind die Stellen markiert. Diese gehen von <<<< bis >>>>, dazwischen
+gibt es noch den Trenner =====. Alles im oberen Teil kommt aus der Datei, in die
+ihr mergen wollt (hier also der Datei aus dem master-branch) und steht im
+Konflikt mit dem unteren Teil, der aus der Datei kommt, aus der gemergt werden
+soll (hier: aus dem development-branch)
 
     <<<<<<< HEAD:file.txt
     Hello world
@@ -56,7 +60,7 @@ Dateien sind die Stellen markiert:
     Goodbye
     >>>>>>> 77976da35a11db4580b80ae27e8d65caf5208086:file.txt
 
-Bearbeitet die kritischen Stellen, added die Datei und commitet neu. Alles
+Bearbeitet die kritischen Stellen, löscht die Trennerzeilen, added die Datei und commitet neu. Alles
 sollte glatt laufen.
 
 rebase hat den Vorteil, dass ihr damit commits zusammenfassen könnt und somit
