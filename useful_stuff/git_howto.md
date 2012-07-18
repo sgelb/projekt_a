@@ -18,7 +18,12 @@ und erstellen das erste commit.
 
 Noch befinden wir uns im master-branch. In dem wollen wir allerdings nicht
 arbeiten, sondern immer nur stabilen Code haben. Also erstellen wir einen
-weiteren Zweig mit dem Namen development:
+weiteren branch mit dem Namen development und wechseln danach in ihn:
+
+    git branch development
+    git checkout development
+
+Die beiden Begriffe lassen sich auch zusammenfassen:
 
     git checkout -b development
 
