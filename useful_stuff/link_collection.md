@@ -6,6 +6,7 @@ Agile Web Development with Rails (4th edition) als pdf.
 
 Grundlegende Einführung
 - http://guides.rubyonrails.org/getting_started.html
+- http://ruby.railstutorial.org/ruby-on-rails-tutorial-book
 
 Alle Ruby on Rails Guides
 - http://edgeguides.rubyonrails.org/
@@ -27,6 +28,7 @@ klein klein
 
 Youtube
 - http://www.youtube.com/watch?v=c4cwuuJWbhQ (Einstieg in Rails)
+
 
 Git
 ===
