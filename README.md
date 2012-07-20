@@ -1,4 +1,5 @@
 Projekt #02: Der Pizza-Service
+==============================
 
 Es soll ein Pizza-Service im Web zur Verfügung stehen. Dort kann man als Kunde
 Standardpizzen oder individuelle Kreationen bestellen. Bei jeder Bestellung wird
@@ -7,12 +8,37 @@ eine oder mehrere Pizzen aus sein, so darf ein Neukunde diese nicht bestellen
 können. Sie soll aber dennoch als momentan nicht lieferbar angezeigt werden.
 Jedem Kunden muss der Rechnungsbetrag gezeigt werden.
 
+
+Mittwoch Treffen um 12
+======================
+
+let's talk about:
+-----------------
+
+Strukturelle Vorarbeit:
+
+- Einführung in git/github
+- git/github-workflow überlegen: branches etcpp
+- Wie kommunizieren wir?
+- Code-/Datei-/Wasauchimmer-Konventionen (zB: Ordner klein und ohne Leerzeichen)
+- Dokumentation von allem
+- Kommunikation mit B.
+
+Konkrete Projektarbeit:
+
+- User Stories fertigmachen: Doppelungen raus, nach Priorität sortieren, evtl.
+  Struktur NutzerIn/BetreiberIn einführen
+- Grober Strukturplan
+- Arbeitsverteilung
+- Grober Zeitplan
+- Heroku?
+
 TODO
 ====
 
-step one
---------
+step one - abnahme von b.
+-------------------------
 
-- user stories
-- wireframes
-- clickflow
+- user stories 	[x] 
+- wireframes	[ ] 
+- clickflow		[ ]
