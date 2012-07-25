@@ -1,1 +1,22 @@
-<h1>index product</h1>
+<h1>Our products</h1>
+
+
+<table>
+    <tr>
+        <th>Product title</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+    <% @products.each do |product| %>
+        <tr>
+            <td> <%= product.title %> </td>
+            <td> <%= product.price %> </td>
+            <td> <%= link_to 'Show', product %> </td>
+            <td> <%= link_to 'Edit', edit_product_path(product) %> </td>
+            <td> <%= link_to 'Destroy', product, 
+                confirm: 'Are you sure?', method: :delete %> </td>
+        </tr>
+    <% end %>
+</table>
+
+<%= link_to 'New product', new_product_path %>
