@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RailsMany2many::Application.load_tasks
+Hinundveg::Application.load_tasks

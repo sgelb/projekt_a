@@ -1,4 +1,4 @@
-RailsMany2many::Application.routes.draw do
+Hinundveg::Application.routes.draw do
 
 
   resources :products
