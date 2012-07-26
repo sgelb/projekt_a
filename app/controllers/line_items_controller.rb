@@ -10,10 +10,11 @@ class LineItemsController < ApplicationController
     @line_item = @cart.line_items.build(product: product)
     if @line_item.save
       flash[:notice] = 'Added product to cart!'
+      redirect_to @line_item.cart
     else
       flash[:error] = 'Could not add product to cart!'
+      redirect_to line_items_path
     end
-    redirect_to line_items_path
   end
 
   def edit
