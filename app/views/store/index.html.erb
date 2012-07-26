@@ -3,7 +3,8 @@
 <% @products.each do |p| %>
         <b> <%= p.title %> </b>
         <div>
-            <%= number_to_currency(p.price, unit: '€ ') %> only!
+            <%= number_to_currency(p.price, unit: '€ ') %> only! 
+            <%= button_to 'Add to cart', line_items_path(product_id: p) %>
         </div>
          <br>
 <% end %>
