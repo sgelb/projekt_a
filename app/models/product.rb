@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
   attr_accessible :price, :title
+  default_scope order: 'title'
 
   # we don't want empty fields
   validates :title, :price, presence: true

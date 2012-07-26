@@ -1,0 +1,9 @@
+<h1>Our pizzas!</h1>
+
+<% @products.each do |p| %>
+        <b> <%= p.title %> </b>
+        <div>
+            <%= number_to_currency(p.price, unit: '€ ') %> only!
+        </div>
+         <br>
+<% end %>
