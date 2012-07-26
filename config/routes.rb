@@ -2,6 +2,7 @@ RailsMany2many::Application.routes.draw do
 
 
   resources :products
+  resources :carts
 
   root to: 'store#index', as: 'store'
   # The priority is based upon order of creation:
