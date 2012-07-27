@@ -1,17 +1,23 @@
 <h1>Your cart</h1>
 
 <table>
-    <% @total_price = 0 %>
-    <% @cart.line_items.each do |item| %>
-        <%# FIXME: total_price in def auslagern! %>
-        <% @total_price += item.product.price %>
-        <tr>
-            <td> <%= item.product.title %> </td>
-            <td> <%= number_to_currency(item.product.price, unit: '€ ') %> </td>
-        </tr>
-    <% end %>
+  <% @total_price = 0 %>
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+  </tr>
+  <% @cart.line_items.each do |item| %>
+    <%# FIXME: total_price in def auslagern! %>
+    <% @total_price += item.product.price %>
     <tr>
-        <td><b>Total price:</b></th> 
-        <td><b> <%= number_to_currency(@total_price, unit: '€ ') %> </b></th>
+      <td> <%= item.product.title %> </td>
+      <td> <%= number_to_currency(item.product.price, unit: '€ ') %> </td>
+      <td> <%= link_to 'Remove', cart_path(item.product_id), 
+        confirm: 'Are you sure?', method: :delete %> </td>
     </tr>
+  <% end %>
+  <tr>
+    <td>Total price:</td> 
+    <td> <%= number_to_currency(@total_price, unit: '€ ') %> </td>
+  </tr>
 </table>
