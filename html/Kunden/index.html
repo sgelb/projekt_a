@@ -1,145 +1,141 @@
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-</head>
-<body>
-<div id="header">Header </div>
-<div id="navi"><a href="UrlBlockedError.aspx" target="_blank">Angebote</a> <a href="#">
-Klassiker</a> <a href="#">Selbstbaukasten</a><br>
-</div>
-<div id="content">
-<div id="content_right">
-<div id="warenkorb">
-<h4>Warenkorb</h4>
- </div>
-<table>
-<tbody>
-<tr align="left">
-<td class="bottom-bg" valign="top">
-<div id="lieferadresse">
-<h4>Lieferadresse</h4>
-<div id="child">Firma<br>
- </div>
-<div id="child2">Abteilung<br>
- </div>
-<br>
-<br>
-<div class="odr_sex"><br>
- Herr Frau </div>
-<div id="child">Vorname <span class="mandatory">*</span><br>
- </div>
-<div id="child2">Nachname <span class="mandatory">*</span><br>
- </div>
-<br>
-<br>
-<br>
-<div id="child">Stra&szlig;e <span class="mandatory">*</span><br>
- </div>
-<div id="child2">Nr. <span class="mandatory">*</span><br>
- </div>
-<br>
-<br>
-<br>
-<div id="child">PLZ <span class="mandatory">*</span><br>
- </div>
-<div id="child2">Ort <span class="mandatory">*</span><br>
- </div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="content_left"><br>
-<br>
-<table>
-<img src="8.3.83.4/themes/base/clear.gif"> = scharf &nbsp;&nbsp;&nbsp; <img src="8.3.83.4/themes/base/clear.gif"> = vegan &nbsp;&nbsp;&nbsp;
-<img src="8.3.83.4/themes/base/clear.gif"> = glutenfrei &nbsp;&nbsp;&nbsp; <img src="8.3.83.4/themes/base/clear.gif"> = laktosefrei
-<br>
-<br>
-</table>
-<table>
-<tbody>
-<tr>
-<td>Pizza Margherita</td>
-<td></td>
-</tr>
-<tr>
-</tr>
-</tbody>
-</table>
-<table>
-<img src="8.3.83.4/themes/base/clear.gif">
-<tbody>
-<tr>
-<td>Pizza Quatro Queso</td>
-<td></td>
-</tr>
-<tr>
-</tr>
-</tbody>
-</table>
-<table>
-<img src="8.3.83.4/themes/base/clear.gif">
-<tbody>
-<tr>
-<td>Pizza Siciliana</td>
-<td></td>
-</tr>
-<tr>
-</tr>
-</tbody>
-</table>
-<table>
-<img src="8.3.83.4/themes/base/clear.gif">
-<tbody>
-<tr>
-<td>Pizza Roma</td>
-<td></td>
-</tr>
-<tr>
-</tr>
-</tbody>
-</table>
-<table>
-<img src="8.3.83.4/themes/base/clear.gif">
-<tbody>
-<tr>
-<td>Pizza Venezia</td>
-<td></td>
-</tr>
-<tr>
-<img src="8.3.83.4/themes/base/clear.gif">
-</tr>
-</tbody>
-</table>
-<table>
-<img src="8.3.83.4/themes/base/clear.gif">
-<tbody>
-<tr>
-<td>Pizza Modena</td>
-<td></td>
-</tr>
-<tr>
-</tr>
-</tbody>
-</table>
-<table>
-<img src="8.3.83.4/themes/base/clear.gif">
-<tbody>
-<tr>
-<td>Pizza Milano</td>
-<td></td>
-</tr>
-<tr>
-</tr>
-</tbody>
-</table>
-</div>
-<div></div>
-<div id="footer"><a href="redir.aspx?C=f84990837cce49cea09ca792637c8f45&amp;URL=http%3a%2f%2fwww.test.de%2fimpressum" target="_blank">Impressum</a> |
-<a href="redir.aspx?C=f84990837cce49cea09ca792637c8f45&amp;URL=http%3a%2f%2fwww.test.de%2fkontakt" target="_blank">
-Kontakt</a> </div>
-</body>
+	<head>
+		<title>Titel</title>
+		<link rel="stylesheet" type = "text/css" href = "style.css">
+	</head>
+	
+	<body>
+		<div id = header>
+		 	Header
+		</div>
+		
+		<div id = navi>
+			<a href="index.html"> Angebote</a>
+            <a href="#"> Klassiker</a>
+            <a href="#"> Selbstbaukasten</a><br>
+		</div>
+		
+		<div id = content>
+			
+		
+			<div id = content_right>
+				<div id = warenkorb>
+					<h4>Warenkorb</h4>
+                    <form action="input_text_value.htm">
+                        <textarea name="Pfade" cols="41" rows="5" readonly></textarea>
+                    </form>
+				</div>
+				<table>
+				<tr align="left">
+					<td class="bottom-bg" valign="top">
+				
+				<div id = lieferadresse>
+				<h4>Lieferadresse</h4>	 
+						
+					 <div id="child">
+						<label company>Firma</label><br>
+						<input id="company" class="lieferadresse" type="text" maxlength="64" name="company">
+					</div>
+					
+				    <div id="child2">
+                        <label for="odr_department">Abteilung</label><br>
+                        <input id="odr_department" class="lieferadresse" type="text" maxlength="32" name="odr_department">
+                    </div>
+					
+					<br><br>
+                    <div class="odr_sex">
+                   
+						<br>
+                        <label>
+                            <input class="lieferadresse" type="radio" value="1" name="odr_sex">
+                            Herr
+                        </label>
+                        <label>
+                            <input class="lieferadresse" type="radio" value="2" name="odr_sex">
+                            Frau
+                        </label>
+                    </div>
+                    <div id="child">
+                        <label for="odr_firstname">
+                            Vorname
+                            <span class="mandatory">*</span><br>
+                        </label>
+                        <input id="odr_firstname" class="lieferadresse" type="text" maxlength="64" name="odr_firstname">
+                    </div>
+                    <div id="child2">
+                        <label for="odr_lastname">
+                            Nachname
+                            <span class="mandatory">*</span><br>
+                        </label>
+                        <input id="odr_lastname" class="lieferadresse" type="text" maxlength="64" name="odr_lastname">
+                    </div>
+					<br><br><br>
+					<div id="child">
+                        <label for="odr_street">
+                            Stra&szlig;e
+                            <span class="mandatory">*</span><br>
+                        </label>
+                        <input id="odr_street" class="lieferadresse" type="text" maxlength="54" name="odr_street">
+                    </div>
+                    
+					<div id="child2">
+                        <label for="odr_street_no">
+                            Nr.
+                            <span class="mandatory">*</span><br>
+                        </label>
+                        <input id="odr_street_no" class="lieferadresse" type="text" maxlength="10" name="odr_street_no">
+                    </div>
+					<br><br><br>
+					<div id="child">
+                        <label for="odr_zipcode">
+                            PLZ
+                            <span class="mandatory">*</span><br>
+                        </label>
+                        <input id="odr_zipcode" class="lieferadresse" type="text" maxlength="10" name="odr_zipcode">
+                    </div>
+					
+                    <div id="child2">
+                        <label for="odr_city">
+                            Ort
+                            <span class="mandatory">*</span><br>
+                        </label>
+                        <input id="odr_city" class="lieferadresse" type="text" maxlength="54" name="odr_city">
+                    </div>
+									
+				</div>	
+				
+				</td>
+				</tr>
+				</table>
+				
+			</div>
+			</div>
+			
+			<div id = content_left>
+				<br><br>
+				<table>
+				<img src="http://cdn.yourdelivery.de/images/yd-frontend-step3/menu-spicy.png"> = scharf &nbsp;&nbsp;&nbsp;
+				<img src="http://t3.gstatic.com/images?q=tbn:ANd9GcRHfcIqbl-JlQoW8O-mjCZBpM68xhIipOCcBf0wwfT6P53EGe7T15bxHJY"> = vegan &nbsp;&nbsp;&nbsp;
+				<img src="http://t2.gstatic.com/images?q=tbn:ANd9GcRugwmd9OLRaEJxWcTogWxMhQQJLsIwP70BpEqpmvGF1dnep-o0AyFL3g"> = glutenfrei &nbsp;&nbsp;&nbsp;
+				<img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQLEKAN43Y8uniy5L4KVlYKzjTeUXl0sPurgjStmWJO9FAyy_MYT5WtMrA"> = laktosefrei
+				<br><br>
+				<table><tr><td>Pizza Margherita<td><tr></table>
+				<table><img src="http://www.sixpacksmackdown.com/wp-content/uploads/2012/05/pizza.png"><tr><td>Pizza Quatro Queso<td><tr></table>
+				<table><img src="http://www.sixpacksmackdown.com/wp-content/uploads/2012/05/pizza.png"><tr><td>Pizza Siciliana<td><tr></table>
+				<table><img src="http://www.sixpacksmackdown.com/wp-content/uploads/2012/05/pizza.png"><tr><td>Pizza Roma<td><tr></table>
+				<table><img src="http://www.sixpacksmackdown.com/wp-content/uploads/2012/05/pizza.png"><tr><td>Pizza Venezia<td><tr><img src="http://www.experto.de/pizza.jpg"></table>
+				<table><img src="http://www.sixpacksmackdown.com/wp-content/uploads/2012/05/pizza.png"><tr><td>Pizza Modena<td><tr></table>
+				<table><img src="http://www.sixpacksmackdown.com/wp-content/uploads/2012/05/pizza.png"><tr><td>Pizza Milano<td><tr></table>
+				</table>
+				
+						
+			</div>
+			
+		</div>
+		
+		<div id = footer>
+		<a href="http://www.test.de/impressum">Impressum</a> | <a href="http://www.test.de/kontakt">Kontakt</a>
+		</div>
+		
+	</body>
 </html>
