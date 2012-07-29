@@ -13,8 +13,8 @@
     <tr>
       <td> <%= item.product.title %> </td>
       <td> <%= number_to_currency(item.product.price, unit: '€ ') %> </td>
-      <td> <%= link_to 'Remove', cart_path(item.product_id), 
-        confirm: 'Are you sure?', method: :delete %> </td>
+      <td> <%= link_to 'Remove', cart_path(item.product_id),
+        data: { confirm: 'Are you sure?' }, method: :delete %> </td>
     </tr>
   <% end %>
   <tr>

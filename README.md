@@ -14,6 +14,12 @@ Server starten:
 
     rails s
 
+testing
+-------
+
+Test-Datenbanken füllen:
+    bundle exec rake db:setup RAILS_ENV=test
+
 Testserver Sproke starten
     
     bundle exec spork
