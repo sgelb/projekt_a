@@ -13,3 +13,12 @@ Datenbanken erstellen und mit den Daten aus db/seeds.rb füllen:
 Server starten:
 
     rails s
+
+Testserver Sproke starten
+    
+    bundle exec spork
+
+Tests starten
+
+    bundle exec rspec spec/
+

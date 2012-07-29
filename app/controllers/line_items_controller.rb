@@ -17,9 +17,6 @@ class LineItemsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def destroy
     @line_item = LineItem.find_by_id(params[:id])
     @line_item.destroy
