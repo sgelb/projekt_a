@@ -12,14 +12,15 @@ describe "Store Pages" do
   end
 
   describe "before adding sth to cart" do
-    it "should cart be empty" do
+    it "cart should be empty" do
       LineItem.count.should == 0
     end
   end
 
-  describe "add to cart" do
-    it "should add line item" do
-      expect { click_button "Add to cart" }.to change(LineItem, :count).by(1)
+  describe "after adding sth to cart" do
+    it "cart should not be empty" do
+      click_button "Add to cart"
+      LineItem.count.should > 0
     end
   end
 end
