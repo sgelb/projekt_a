@@ -1,0 +1,28 @@
+@import "bootstrap";
+
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 2em;
+  font-size: 1.7em;
+  color: #fff;
+  padding-top: 9px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}

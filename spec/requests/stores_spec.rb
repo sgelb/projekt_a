@@ -8,7 +8,8 @@ describe "Store Pages" do
   describe "store page" do
     it { should have_selector('h1', text:'Our pizzas!') }
     it { should have_selector('title', text:full_title('Our pizzas!')) }
-    it { should have_selector('b', text:'Funghi') }
+    it { should have_selector('td', text:'Funghi') }
+    it { should have_button('Add to cart') }
   end
 
   describe "before adding sth to cart" do

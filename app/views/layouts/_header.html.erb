@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top">
+<div class="navbar-inner">
+    <div class="container">
+        <%= link_to "Hin&Veg", store_path, id: "logo" %>
+        <nav>
+        <ul class="nav pull-right">
+            <li><%= link_to "Home", store_path %></li>
+            <li><%= link_to "Your cart", cart_path(@cart) %></li>
+            <li><%= link_to "Order", '#' %></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+</header>

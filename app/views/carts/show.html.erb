@@ -1,12 +1,15 @@
 <% provide(:title, "Your cart") %>
 <h1>Your cart</h1>
 
-<table>
+<table class="table tbale-striped">
   <% @total_price = 0 %>
-  <tr>
-    <th>Product</th>
-    <th>Price</th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @cart.line_items.each do |item| %>
     <%# FIXME: total_price in def auslagern! %>
     <% @total_price += item.product.price %>
@@ -17,6 +20,7 @@
         data: { confirm: 'Are you sure?' }, method: :delete %> </td>
     </tr>
   <% end %>
+  </tbody>
   <tr>
     <td>Total price:</td> 
     <td> <%= number_to_currency(@total_price, unit: '€ ') %> </td>
