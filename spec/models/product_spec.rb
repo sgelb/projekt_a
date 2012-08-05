@@ -32,7 +32,7 @@ describe Product do
     FactoryGirl.build(:product, price: 0.00).should_not be_valid
   end
 
-  it "is invalid with wrong price format #2 (1,00)" do
+  it "is invalid with wrong price format #3 (1,00)" do
     FactoryGirl.build(:product, price: "1,00").should_not be_valid
   end
 
