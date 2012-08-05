@@ -1,12 +1,15 @@
-- create better application.html.erb, use _header and _footer
-- implement more tests
+dealer
+------
 
-- create Ingredients-Model: name, quantity, price
-- create has_and_belongs_to_many relation between Product- and Ingedients-Model
-- add quantity field to Product
-- make quantity editable for dealer
+- edit product page: dealer can add ingredients (add test: product.ingredients.count > 0)
+- create order info page for dealer
+
+customer
+--------
+
+- show ingredients on products view
+- add quantity field to Products in Cart/LineItem
 - let customer place order
     enter name/address
     decrease quantity in Product model
     output info for customer
-- create order info page for dealer

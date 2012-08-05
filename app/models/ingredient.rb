@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: ingredients
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)
+#  quantity   :integer
+#  price      :decimal(8, 2)
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
 class Ingredient < ActiveRecord::Base
   attr_accessible :name, :price, :quantity
   has_and_belongs_to_many :products
@@ -17,15 +29,3 @@ class Ingredient < ActiveRecord::Base
   # every product name must be unique
   validates :name, uniqueness: true
 end
-# == Schema Information
-#
-# Table name: ingredients
-#
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  quantity   :integer
-#  price      :decimal(8, 2)
-#  created_at :datetime        not null
-#  updated_at :datetime        not null
-#
-

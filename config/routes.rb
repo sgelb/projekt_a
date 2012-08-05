@@ -4,6 +4,7 @@ Hinundveg::Application.routes.draw do
   resources :products
   resources :carts
   resources :line_items
+  resources :ingredients
 
   root to: 'store#index', as: 'store'
   # The priority is based upon order of creation:

@@ -2,21 +2,25 @@
 <h1>Our products</h1>
 
 
-<table>
-    <tr>
-        <th>Product title</th>
-        <th>Price</th>
-        <th>Actions</th>
-    </tr>
-    <% @products.each do |p| %>
+<table class="table">
+    <thead>
         <tr>
-            <td> <%= p.title %> </td>
-            <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
-            <td> <%= link_to 'Edit', edit_product_path(p) %> </td>
-            <td> <%= link_to 'Destroy', p, 
-                confirm: 'Are you sure?', method: :delete %> </td>
+            <th>Product title</th>
+            <th>Price</th>
+            <th>Actions</th>
         </tr>
-    <% end %>
+    </thead>
+    <tbody>
+        <% @products.each do |p| %>
+            <tr>
+                <td> <%= p.title %> </td>
+                <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
+                <td> <%= link_to 'Edit', edit_product_path(p) %> </td>
+                <td> <%= link_to 'Destroy', p, 
+                    confirm: 'Are you sure?', method: :delete %> </td>
+            </tr>
+        <% end %>
+    </tbody>
 </table>
 
 <%= link_to 'New product', new_product_path %>

@@ -1,0 +1,29 @@
+<% provide(:title, "Our ingredients") %>
+<h1>Our ingredients</h1>
+
+
+<table class="table">
+  <thead>
+    <tr>
+        <th>Ingredient name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ingredients.each do |i| %>
+        <tr>
+            <td> <%= i.name %> </td>
+            <td> <%= i.quantity %> </td>
+            <td> <%= number_to_currency(i.price, unit: '€ ') %> </td>
+            <td> <%= link_to 'Edit', edit_ingredient_path(i) %> </td>
+            <td> <%= link_to 'Destroy', i, 
+                confirm: 'Are you sure?', method: :delete %> </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New ingredient', new_ingredient_path %>
+
