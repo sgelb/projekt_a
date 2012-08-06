@@ -18,6 +18,13 @@
     <%= f.text_field :price %>
   </div>
   <div>
+    <% Ingredient.all.each do |i| %>
+      <%= check_box_tag "product[ingredient_ids][]", i.id, 
+        @product.ingredients.include?(i) %>
+        <%= i.name %>
+      <% end %>
+    </div>
+  <div>
     <%= f.submit %>
   </div>
 <% end %>

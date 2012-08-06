@@ -10,3 +10,7 @@ Product.create({title:"Margeritha", price:"1.23"})
 Product.create({title:"Funghi", price:"3.23"})
 Product.create({title:"Montanero", price:"5.54"})
 Product.create({title:"Spinat", price:"9.99"})
+
+Ingredient.create({name:"Mushrooms", quantity:"5", price:"1.11"})
+Ingredient.create({name:"Spinach", quantity:"4", price:"2.11"})
+Ingredient.create({name:"Fake Cheese", quantity:"12", price:"3.11"})

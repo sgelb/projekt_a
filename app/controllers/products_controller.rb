@@ -29,6 +29,7 @@ class ProductsController < ApplicationController
   end
 
   def update
+    params[:product][:ingredient_ids] ||= []
     @product = Product.find(params[:id])
     if @product.update_attributes(params[:product])
       flash[:notice] = 'Saved edited product!'

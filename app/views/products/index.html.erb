@@ -6,6 +6,7 @@
     <thead>
         <tr>
             <th>Product title</th>
+            <th>Ingredients</th>
             <th>Price</th>
             <th>Actions</th>
         </tr>
@@ -14,6 +15,11 @@
         <% @products.each do |p| %>
             <tr>
                 <td> <%= p.title %> </td>
+                <td>
+                <% p.ingredients.each do |i| %>
+                    <%= i.name %><br>
+                <% end %>
+                </td>
                 <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
                 <td> <%= link_to 'Edit', edit_product_path(p) %> </td>
                 <td> <%= link_to 'Destroy', p, 
