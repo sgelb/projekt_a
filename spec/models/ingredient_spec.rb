@@ -58,7 +58,7 @@ describe Ingredient do
   end
 
   it "does not allow duplication of ingredient names" do
-    FactoryGirl.create(:ingredient)
-    FactoryGirl.build(:ingredient).should_not be_valid
+    FactoryGirl.create(:ingredient, name: "foo")
+    FactoryGirl.build(:ingredient, name: "foo").should_not be_valid
   end
 end

@@ -20,7 +20,7 @@
                 <td> <%= p.title %> </td>
                 <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
                 <td> <%= link_to 'Remove', i, 
-                    confirm: 'Are you sure?', method: :delete %> </td>
+                    data: { confirm: 'Are you sure?' }, method: :delete %> </td>
             </tr>
         <% end %>
         <tr>

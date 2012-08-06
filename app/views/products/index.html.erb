@@ -16,14 +16,14 @@
             <tr>
                 <td> <%= p.title %> </td>
                 <td>
-                <% p.ingredients.each do |i| %>
-                    <%= i.name %><br>
-                <% end %>
+                    <% p.ingredients.each do |i| %>
+                        <%= i.name %><br>
+                    <% end %>
                 </td>
                 <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
                 <td> <%= link_to 'Edit', edit_product_path(p) %> </td>
                 <td> <%= link_to 'Destroy', p, 
-                    confirm: 'Are you sure?', method: :delete %> </td>
+                    data: { confirm: 'Are you sure?' }, method: :delete %> </td>
             </tr>
         <% end %>
     </tbody>

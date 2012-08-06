@@ -37,7 +37,7 @@ describe Product do
   end
 
   it "does not allow duplication of product titles" do
-    FactoryGirl.create(:product)
-    FactoryGirl.build(:product).should_not be_valid
+    FactoryGirl.create(:product, title: "foo")
+    FactoryGirl.build(:product, title: "foo").should_not be_valid
   end
 end
