@@ -25,8 +25,6 @@ end
 # Test gems on Linux
 group :test do
   gem 'capybara'
-  gem 'rb-inotify'
-  gem 'libnotify'
   # test server
   gem 'spork'
   # add object to database

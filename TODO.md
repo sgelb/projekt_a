@@ -10,6 +10,7 @@ customer
 dealer
 ------
 
+- notify admin if quantity of ingredients lesser than minimum
 - create order info page for dealer
 
 all
