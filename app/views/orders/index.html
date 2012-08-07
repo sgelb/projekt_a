@@ -1,0 +1,41 @@
+<% provide(:title, "all orders") %>
+<h1>All orders</h1>
+
+<% if @orders.empty? %>
+  <div>There are no orders.</div>
+<% else %>
+  <% @orders.each do |order| %>
+
+    <div>
+      Order Id: <b> <%= order.id %> </b><br>
+      Name: <b> <%= order.name %> </b><br>
+      Address <b> <%= order.address %> </b><br>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product title</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @total_price = 0 %>
+        <% order.line_items.each do |i| %>
+          <% p = Product.find_by_id(i.product_id) %>
+          <%# FIXME: total_price in def auslagern! %>
+          <% @total_price += p.price %>
+          <tr>
+            <td> <%= p.title %> </td>
+            <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td><b>Total price:</b></th> 
+          <td><b> <%= number_to_currency(@total_price, unit: '€ ') %> </b></th>
+        </tr>
+      </tbody>
+    </table>
+  <% end %>
+<% end %>
+

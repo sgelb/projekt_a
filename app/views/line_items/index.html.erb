@@ -8,6 +8,8 @@
         <thead>
             <tr>
                 <th>Card Id</th>
+                <th>Name</th>
+                <th>Address</th>
                 <th>Product title</th>
                 <th>Price</th>
             </tr>
@@ -20,6 +22,8 @@
                 <% @total_price += p.price %>
                 <tr>
                     <td> <%= i.cart_id %> </td>
+                    <td> <%= i.name %> </td>
+                    <td> <%= i.address %> </td>
                     <td> <%= p.title %> </td>
                     <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
                     <td> <%= link_to 'Remove', i, 
