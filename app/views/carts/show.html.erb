@@ -1,28 +1,32 @@
 <% provide(:title, "Your cart") %>
 <h1>Your cart</h1>
 
-<table class="table tbale-striped">
-  <% @total_price = 0 %>
-  <thead>
-    <tr>
-      <th>Product</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-  <% @cart.line_items.each do |item| %>
-    <%# FIXME: total_price in def auslagern! %>
-    <% @total_price += item.product.price %>
-    <tr>
-      <td> <%= item.product.title %> </td>
-      <td> <%= number_to_currency(item.product.price, unit: '€ ') %> </td>
-      <td> <%= link_to 'Remove', cart_path(item.product_id),
-        data: { confirm: 'Are you sure?' }, method: :delete %> </td>
-    </tr>
-  <% end %>
-  </tbody>
-  <tr>
-    <td>Total price:</td> 
-    <td> <%= number_to_currency(@total_price, unit: '€ ') %> </td>
-  </tr>
-</table>
+<% if @cart.line_items.empty? %>
+    <div>is empty.</div>
+<% else %>
+    <table class="table tbale-striped">
+        <% @total_price = 0 %>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @cart.line_items.each do |item| %>
+                <%# FIXME: total_price in def auslagern! %>
+                <% @total_price += item.product.price %>
+                <tr>
+                    <td> <%= item.product.title %> </td>
+                    <td> <%= number_to_currency(item.product.price, unit: '€ ') %> </td>
+                    <td> <%= link_to 'Remove', cart_path(item.product_id),
+                        data: { confirm: 'Are you sure?' }, method: :delete %> </td>
+                </tr>
+            <% end %>
+        </tbody>
+        <tr>
+            <td>Total price:</td> 
+            <td> <%= number_to_currency(@total_price, unit: '€ ') %> </td>
+        </tr>
+    </table>
+<% end %>
