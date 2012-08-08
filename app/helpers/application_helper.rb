@@ -1,5 +1,14 @@
 module ApplicationHelper
   
+  # return total price
+  def total_price line_items
+    total = 0
+    line_items.each do |item|
+      total += item.product.price
+    end
+    total
+  end
+
   # return the cart object corresponding to the
   # current session. create if neccessary.
   def current_cart

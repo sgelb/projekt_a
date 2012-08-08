@@ -17,6 +17,7 @@ class OrdersController < ApplicationController
     end
     if @order.save
       Cart.destroy(session[:cart_id])
+      decrease_ingredients_stock(@order.line_items)
       session[:cart_id] = nil
       flash[:notice] = "Thank you for your order"
       redirect_to store_path

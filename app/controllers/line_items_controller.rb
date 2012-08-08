@@ -1,9 +1,5 @@
 class LineItemsController < ApplicationController
 
-  def index
-    @line_items = LineItem.all
-  end
-
   def create
     @cart = current_cart
     product = Product.find_by_id(params[:product_id])
@@ -17,10 +13,4 @@ class LineItemsController < ApplicationController
     end
   end
 
-  def destroy
-    @line_item = LineItem.find_by_id(params[:id])
-    @line_item.destroy
-    redirect_to line_items_path
-  end
-    
 end

@@ -1,19 +1,17 @@
-customer
---------
+anzahl der zutaten einbauen
+- admin kann mindestanzahl definieren
+- warnung, wenn mindestanzahl unterschritten (mind.anzahl als feld zu ingredients hinzufügen)
+- produkte können nicht ausgewählt werden, wenn nicht alle zutaten vorrätig
 
-- add quantity field to Products in Cart/LineItem
-- let customer place order
-    enter name/address
-    decrease quantity in Product model
-    output info for customer
+zugangskontrolle
+- admin erstellen
+- zugänge für seiten setzen
+- menü je nach rolle anzeigen
 
-dealer
-------
+individuelle pizzen einbauen
 
-- notify admin if quantity of ingredients lesser than minimum
-- create order info page for dealer
-
-all
----
-
-- create access control
+kleinklein & krimskrams
+- in routes.rb :resources mittels only: beschränken
+- mehr tests!
+- mehr DRY: partials für alles mögliche.
+- infos in header für admin: neue order, zutatenmangel, etcpp

@@ -3,6 +3,15 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # decrease ingredients quantity after order is placed
+  def decrease_ingredients_stock line_items
+    line_items.each do |item|
+      Product.find(item.product_id).ingredients.each do |ingredient|
+        ingredient.update_column(:quantity, ingredient.quantity - 1)
+      end
+    end
+  end
+
   # return the cart object corresponding to the
   # current session. create if neccessary.
   def current_cart

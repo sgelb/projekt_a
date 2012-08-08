@@ -5,7 +5,6 @@
     <div>is empty.</div>
 <% else %>
     <table class="table tbale-striped">
-        <% @total_price = 0 %>
         <thead>
             <tr>
                 <th>Product</th>
@@ -14,8 +13,6 @@
         </thead>
         <tbody>
             <% @cart.line_items.each do |item| %>
-                <%# FIXME: total_price in def auslagern! %>
-                <% @total_price += item.product.price %>
                 <tr>
                     <td> <%= item.product.title %> </td>
                     <td> <%= number_to_currency(item.product.price, unit: '€ ') %> </td>
@@ -26,7 +23,7 @@
         </tbody>
         <tr>
             <td>Total price:</td> 
-            <td> <%= number_to_currency(@total_price, unit: '€ ') %> </td>
+            <td> <%= number_to_currency(total_price(@cart.line_items), unit: '€ ') %> </td>
         </tr>
     </table>
     <%= button_to "Place order", new_order_path, method: :get %>
