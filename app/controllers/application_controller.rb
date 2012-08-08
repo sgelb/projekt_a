@@ -8,6 +8,9 @@ class ApplicationController < ActionController::Base
     line_items.each do |item|
       Product.find(item.product_id).ingredients.each do |ingredient|
         ingredient.update_column(:quantity, ingredient.quantity - 1)
+        if ingredient.quantity == 0
+          ingredient.update_column(:active, false)
+        end
       end
     end
   end

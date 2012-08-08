@@ -1,5 +1,15 @@
 module ApplicationHelper
   
+  # false if product has inactive ingredients
+  def has_inactive_ingredients? product
+    product.ingredients.each do |i|
+      if not i.active 
+        return true
+      end
+    end
+    false
+  end
+
   # return total price
   def total_price line_items
     total = 0

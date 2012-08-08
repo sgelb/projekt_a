@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-i1 = Ingredient.create({name:"Tomatoes", quantity:"6", price:"0.81"})
-i2 = Ingredient.create({name:"Spinach", quantity:"4", price:"2.11"})
-i3 = Ingredient.create({name:"Fake Cheese", quantity:"12", price:"3.11"})
-i4 = Ingredient.create({name:"Mushrooms", quantity:"5", price:"1.11"})
+i1 = Ingredient.create({name:"Tomatoes", quantity:"6", price:"0.81", active: true})
+i2 = Ingredient.create({name:"Spinach", quantity:"4", price:"2.11", active: true})
+i3 = Ingredient.create({name:"Fake Cheese", quantity:"12", price:"3.11", active: true})
+i4 = Ingredient.create({name:"Mushrooms", quantity:"5", price:"1.11", active: true})
 
 p1 = Product.new({title:"Margeritha", price:"1.23"})
 p2 = Product.new({title:"Funghi", price:"3.23"})

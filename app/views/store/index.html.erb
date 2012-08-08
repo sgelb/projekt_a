@@ -19,7 +19,11 @@
                     <% end %>
                 </td>
                 <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
-                <td> <%= button_to 'Add to cart', line_items_path(product_id: p) %> </td>
+                <% if has_inactive_ingredients?(p) %>
+                    <td> Product currently not available </td>
+                <% else %>
+                    <td> <%= button_to 'Add to cart', line_items_path(product_id: p) %> </td>
+                <% end %>
             </tr>
         <% end %>
     </tbody>
