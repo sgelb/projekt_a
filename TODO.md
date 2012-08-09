@@ -1,7 +1,6 @@
 anzahl der zutaten einbauen
 - admin kann mindestanzahl definieren
 - warnung, wenn mindestanzahl unterschritten (mind.anzahl als feld zu ingredients hinzufügen)
-- produkte können nicht ausgewählt werden, wenn nicht alle zutaten vorrätig
 
 zugangskontrolle
 - admin erstellen
@@ -11,7 +10,7 @@ zugangskontrolle
 individuelle pizzen einbauen
 
 kleinklein & krimskrams
-- in routes.rb :resources mittels only: beschränken
 - mehr tests!
+- in routes.rb :resources mittels only: beschränken
 - mehr DRY: partials für alles mögliche.
 - infos in header für admin: neue order, zutatenmangel, etcpp

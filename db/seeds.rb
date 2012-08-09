@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 i1 = Ingredient.create({name:"Tomatoes", quantity:"6", price:"0.81", active: true})
-i2 = Ingredient.create({name:"Spinach", quantity:"4", price:"2.11", active: true})
+i2 = Ingredient.create({name:"Spinach", quantity:"4", price:"2.11", active: false})
 i3 = Ingredient.create({name:"Fake Cheese", quantity:"12", price:"3.11", active: true})
 i4 = Ingredient.create({name:"Mushrooms", quantity:"5", price:"1.11", active: true})
 
