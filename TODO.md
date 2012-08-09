@@ -8,8 +8,6 @@ zugangskontrolle
 
 individuelle pizzen einbauen
 
-cart in sidebar
-
 kleinklein & krimskrams
 - mehr tests!
 - in routes.rb :resources mittels only: beschränken

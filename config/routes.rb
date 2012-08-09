@@ -1,6 +1,5 @@
 Hinundveg::Application.routes.draw do
 
-
   resources :products
   resources :carts
   resources :line_items

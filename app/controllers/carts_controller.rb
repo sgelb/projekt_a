@@ -17,7 +17,7 @@ class CartsController < ApplicationController
     current_cart.line_items.each do |item|
       item.destroy
     end
-    flash[:notice] = 'Cart deleted'
+    flash[:success] = 'Cart deleted'
     redirect_to store_url
   end
 

@@ -11,7 +11,7 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = Ingredient.new(params[:ingredient])
     if @ingredient.save
-      flash[:notice] = 'Saved new ingredient!'
+      flash[:success] = 'Saved new ingredient!'
       redirect_to ingredients_path
     else
       render action: 'new'
@@ -40,7 +40,7 @@ class IngredientsController < ApplicationController
   def update
     @ingredient = Ingredient.find(params[:id])
     if @ingredient.update_attributes(params[:ingredient])
-      flash[:notice] = 'Saved edited ingredient!'
+      flash[:success] = 'Saved edited ingredient!'
       redirect_to ingredients_path
     else
       render action: 'edit'

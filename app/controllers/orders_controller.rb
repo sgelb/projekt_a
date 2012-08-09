@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
       Cart.destroy(session[:cart_id])
       decrease_ingredients_stock(@order.line_items)
       session[:cart_id] = nil
-      flash[:notice] = "Thank you for your order"
+      flash[:success] = "Thank you for your order"
       redirect_to store_path
     else
       flash[:error] = "Could not place order."

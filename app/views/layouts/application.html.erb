@@ -10,14 +10,22 @@
         <%= render 'layouts/header' %>
         <div>
             <% flash.each do |key, msg| %>
-                <div>
-                    <%= key %>: <%= msg %> 
+                <div class="alert alert-<%= key %>">
+                    <%= msg %> 
                 </div>
             <% end %>
-            <div class="container">
-                <%= yield %>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span9">
+                    <%= yield %>
+                </div>
+                <div class="span3 sidebar">
+                    <%= render @cart if controller_name == 'store' %>
+                </div>
             </div>
-            <%= render 'layouts/footer' %>
-            <%= debug(params) if Rails.env.development? %>
-        </body>
-    </html>
+        </div>
+        <%= render 'layouts/footer' %>
+        <%= debug(params) if Rails.env.development? %>
+    </body>
+</html>
