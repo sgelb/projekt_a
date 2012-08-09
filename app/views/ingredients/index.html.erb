@@ -20,7 +20,7 @@
             <td> <%= number_to_currency(i.price, unit: '€ ') %> </td>
             <td> <%= i.active %> </td>
             <td> <%= link_to 'Edit', edit_ingredient_path(i) %> </td>
-            <td> <%= link_to 'Destroy', i, 
+            <td> <%= link_to 'Delete', i, 
               data: { confirm: 'Are you sure?' }, method: :delete %> </td>
         </tr>
     <% end %>

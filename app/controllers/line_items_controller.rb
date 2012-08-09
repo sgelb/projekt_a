@@ -12,5 +12,14 @@ class LineItemsController < ApplicationController
       redirect_to line_items_path
     end
   end
+ 
+
+  def destroy
+    # session[:cart_id] is id of current cart
+    # params[:id] is product_id
+    LineItem.find_by_cart_id_and_product_id(session[:cart_id], params[:id]).destroy
+    flash[:notice] = "Removed item from cart"
+    redirect_to current_cart
+  end
 
 end

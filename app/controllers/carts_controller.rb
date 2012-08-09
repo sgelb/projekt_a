@@ -1,11 +1,5 @@
 class CartsController < ApplicationController
 
-  def index
-  end
-
-  def new
-  end
-
   def show
     # a user can only see his own cart
     if session[:cart_id] == params[:id].to_i
@@ -19,15 +13,12 @@ class CartsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def destroy
-    # session[:cart_id] is id of current cart
-    # params[:id] is product_id
-    LineItem.find_by_cart_id_and_product_id(session[:cart_id], params[:id]).destroy
-    flash[:notice] = "Removed item from cart"
-    redirect_to current_cart
+    current_cart.line_items.each do |item|
+      item.destroy
+    end
+    flash[:notice] = 'Cart deleted'
+    redirect_to store_url
   end
 
 end
