@@ -1,6 +1,5 @@
-anzahl der zutaten einbauen
-- admin kann mindestanzahl definieren
-- warnung, wenn mindestanzahl unterschritten (mind.anzahl als feld zu ingredients hinzufügen)
+zutaten
+- zusätzliches feld: threshold:integer
 
 bestellungen
 - status hinzufügen
@@ -11,6 +10,8 @@ zugangskontrolle
 - menü je nach rolle anzeigen
 
 individuelle pizzen einbauen
+
+cart in sidebar
 
 kleinklein & krimskrams
 - mehr tests!

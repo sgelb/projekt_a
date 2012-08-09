@@ -18,11 +18,15 @@
                 <td> <%= p.title %> </td>
                 <td>
                     <% p.ingredients.each do |i| %>
-                        <%= i.name %><br>
+                        <div class="small-amount-<%= small_amount?(i.quantity) %>">
+                            <%= i.name %><br>
+                        </div>
                     <% end %>
                 </td>
                 <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
-                <td> <%= has_only_active_ingredients?(p) %>
+                <td class="active-<%= has_only_active_ingredients?(p) %>">
+                    <%= has_only_active_ingredients?(p) %>
+                </td>
                 <td> <%= link_to 'Edit', edit_product_path(p) %> </td>
                 <td> <%= link_to 'Delete', p, 
                     data: { confirm: 'Are you sure?' }, method: :delete %> </td>

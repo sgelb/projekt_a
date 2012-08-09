@@ -26,3 +26,13 @@ body {
   color: #fff;
   text-decoration: none;
 }
+
+/* highlight inactive table fields */
+.active-false {
+  color: #ff3344;
+}
+
+/* highlight small quantity fields */
+.small-amount-true {
+  color: #ff3344;
+}

@@ -1,5 +1,11 @@
 module ApplicationHelper
   
+  # true if amount < 10
+  def small_amount? quantity
+    return false unless quantity < 10
+    true
+  end
+
   # false if product has inactive ingredients
   def has_only_active_ingredients? product
     product.ingredients.each do |i|

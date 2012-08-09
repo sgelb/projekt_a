@@ -14,15 +14,17 @@
   </thead>
   <tbody>
     <% @ingredients.each do |i| %>
-        <tr>
-            <td> <%= i.name %> </td>
-            <td> <%= i.quantity %> </td>
-            <td> <%= number_to_currency(i.price, unit: '€ ') %> </td>
-            <td> <%= i.active %> </td>
-            <td> <%= link_to 'Edit', edit_ingredient_path(i) %> </td>
-            <td> <%= link_to 'Delete', i, 
-              data: { confirm: 'Are you sure?' }, method: :delete %> </td>
-        </tr>
+      <tr>
+        <td> <%= i.name %> </td>
+        <td class="small-amount-<%=small_amount?(i.quantity)%>"> 
+          <%= i.quantity %> 
+        </td>
+        <td> <%= number_to_currency(i.price, unit: '€ ') %> </td>
+        <td class="active-<%=i.active%>"> <%= i.active %> </td>
+        <td> <%= link_to 'Edit', edit_ingredient_path(i) %> </td>
+        <td> <%= link_to 'Delete', i, 
+          data: { confirm: 'Are you sure?' }, method: :delete %> </td>
+      </tr>
     <% end %>
   </tbody>
 </table>
