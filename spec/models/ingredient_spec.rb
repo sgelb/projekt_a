@@ -62,7 +62,8 @@ describe Ingredient do
     FactoryGirl.build(:ingredient, name: "foo").should_not be_valid
   end
 
-  it "should be inactive if quantity = 0" do
+  it "is inactive if quantity = 0" do
     FactoryGirl.build(:ingredient, quantity: 0).active.should be_false
   end
+
 end
