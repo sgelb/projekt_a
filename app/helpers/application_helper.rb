@@ -1,8 +1,8 @@
 module ApplicationHelper
   
   # true if amount < 10
-  def small_amount? quantity
-    return false unless quantity < 10
+  def small_amount? quantity, threshold
+    return false unless quantity <= threshold
     true
   end
 

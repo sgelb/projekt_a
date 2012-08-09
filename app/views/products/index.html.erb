@@ -18,7 +18,7 @@
                 <td> <%= p.title %> </td>
                 <td>
                     <% p.ingredients.each do |i| %>
-                        <div class="small-amount-<%= small_amount?(i.quantity) %>">
+                        <div class="small-amount-<%= small_amount?(i.quantity, i.threshold) %>">
                             <%= i.name %><br>
                         </div>
                     <% end %>

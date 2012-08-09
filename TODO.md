@@ -1,6 +1,3 @@
-zutaten
-- zusätzliches feld: threshold:integer
-
 bestellungen
 - status hinzufügen
 

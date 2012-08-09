@@ -11,19 +11,25 @@
 #
 
 class Ingredient < ActiveRecord::Base
-  attr_accessible :name, :price, :quantity, :active
+  attr_accessible :name, :price, :quantity, :active, :threshold
   has_and_belongs_to_many :products
   
   before_save :set_active_field
 
   # we don't want empty fields
-  validates :name, :quantity, :price, presence: true
+  validates :name, :quantity, :price, :active, :threshold, presence: true
 
   # quantity has to be integer
   validates :quantity, numericality: { only_integer: true }
 
   # quantity can not be lesser than zero
   validates :quantity, numericality: { greater_than_or_equal_to: 0 }
+  
+  # threshold has to be integer
+  validates :threshold, numericality: { only_integer: true }
+
+  # threshold can not be lesser than zero
+  validates :threshold, numericality: { greater_than_or_equal_to: 0 }
 
   # price must have special format and be greater than 0
   validates :price, format: { :with => /^\d+??(?:\.\d{0,2})?$/ }, numericality: {greater_than: 0}
