@@ -14,6 +14,8 @@ class Ingredient < ActiveRecord::Base
   attr_accessible :name, :price, :quantity, :active
   has_and_belongs_to_many :products
   
+  before_save :set_active_field
+
   # we don't want empty fields
   validates :name, :quantity, :price, presence: true
 
@@ -28,4 +30,10 @@ class Ingredient < ActiveRecord::Base
 
   # every product name must be unique
   validates :name, uniqueness: true
+
+  def set_active_field
+    if self.quantity.zero?
+      self.active = 'false'
+    end
+  end
 end

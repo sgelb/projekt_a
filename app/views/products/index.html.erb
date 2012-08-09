@@ -22,7 +22,7 @@
                     <% end %>
                 </td>
                 <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
-                <td> <%= has_inactive_ingredients?(p) %>
+                <td> <%= has_only_active_ingredients?(p) %>
                 <td> <%= link_to 'Edit', edit_product_path(p) %> </td>
                 <td> <%= link_to 'Delete', p, 
                     data: { confirm: 'Are you sure?' }, method: :delete %> </td>
