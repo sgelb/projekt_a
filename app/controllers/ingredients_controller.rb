@@ -24,6 +24,15 @@ class IngredientsController < ApplicationController
 
   def destroy
     @ingredient = Ingredient.find_by_id(params[:id])
+    Product.all.each do |product|
+      product.ingredients.each do |ingredient|
+        if ingredient.id == @ingredient.id
+          flash[:error] = 'Cannot delete ingredient that is still part of product.'
+          redirect_to ingredients_path
+          return
+        end
+      end
+    end
     @ingredient.destroy
     redirect_to ingredients_path
   end
