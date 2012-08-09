@@ -1,0 +1,14 @@
+<tr>
+    <td> <%= product.title %> </td>
+    <td>
+        <% product.ingredients.each do |i| %>
+            <%= i.name %><br>
+        <% end %>
+    </td>
+    <td> <%= number_to_currency(product.price, unit: '€ ') %> </td>
+    <% if has_only_active_ingredients?(product) %>
+        <td> <%= button_to 'Add to cart', line_items_path(product_id: product) %> </td>
+    <% else %>
+        <td> Product currently not available </td>
+    <% end %>
+</tr>

@@ -20,13 +20,7 @@
         </tr>
       </thead>
       <tbody>
-        <% order.line_items.each do |i| %>
-          <% p = Product.find_by_id(i.product_id) %>
-          <tr>
-            <td> <%= p.title %> </td>
-            <td> <%= number_to_currency(p.price, unit: '€ ') %> </td>
-          </tr>
-        <% end %>
+        <%= render(order.line_items) %>
         <tr>
           <td><b>Total price:</b></th> 
           <td><b> <%= number_to_currency(total_price(order.line_items), unit: '€ ') %> </b></th>
