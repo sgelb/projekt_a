@@ -2,6 +2,12 @@ anzahl der zutaten einbauen
 - admin kann mindestanzahl definieren
 - warnung, wenn mindestanzahl unterschritten (mind.anzahl als feld zu ingredients hinzufügen)
 
+cart
+- customer kann cart komplett löschen
+
+bestellungen
+- status hinzufügen
+
 zugangskontrolle
 - admin erstellen
 - zugänge für seiten setzen
