@@ -17,7 +17,7 @@ class Ingredient < ActiveRecord::Base
   before_save :set_active_field
 
   # we don't want empty fields
-  validates :name, :quantity, :price, :active, :threshold, presence: true
+  validates :name, :quantity, :price, :threshold, presence: true
 
   # quantity has to be integer
   validates :quantity, numericality: { only_integer: true }
