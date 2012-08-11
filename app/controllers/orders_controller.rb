@@ -19,12 +19,21 @@ class OrdersController < ApplicationController
       Cart.destroy(session[:cart_id])
       decrease_ingredients_stock(@order.line_items)
       session[:cart_id] = nil
-      flash[:success] = "Thank you for your order"
+      flash[:notice] = "Thank you for your order"
       redirect_to store_path
     else
       flash[:error] = "Could not place order."
       render action: 'new'
     end
+  end
+
+  def destroy
+    if Order.destroy(params[:id])
+      flash[:notice] = "Order deleted"
+    else
+      flash[:error] = "Could not delete order."
+    end
+      redirect_to orders_path
   end
 
 end

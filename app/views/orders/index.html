@@ -5,28 +5,43 @@
   <div>There are no orders.</div>
 <% else %>
   <% @orders.each do |order| %>
+    <div class="single-order">
+        <table class="table table-condensed">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Name</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> <%= order.id %> </td>
+              <td> <%= order.name %> </td>
+              <td> <%= order.address %> </td>
+            </tr>
+          </tbody>
+      </table>
 
-    <div>
-      Order Id: <b> <%= order.id %> </b><br>
-      Name: <b> <%= order.name %> </b><br>
-      Address <b> <%= order.address %> </b><br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Product title</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render(order.line_items) %>
+          <tr>
+            <td><b>Total price:</b></th> 
+            <td><b> <%= number_to_currency(total_price(order.line_items), unit: '€ ') %> </b></th>
+            <td> <%= button_to 'Delete order', order, 
+              data: { confirm: 'Are you sure?' }, method: :delete %> </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Product title</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render(order.line_items) %>
-        <tr>
-          <td><b>Total price:</b></th> 
-          <td><b> <%= number_to_currency(total_price(order.line_items), unit: '€ ') %> </b></th>
-        </tr>
-      </tbody>
-    </table>
   <% end %>
 <% end %>
 
