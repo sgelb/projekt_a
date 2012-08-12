@@ -15,6 +15,7 @@
 class Ingredient < ActiveRecord::Base
   attr_accessible :name, :price, :quantity, :active, :threshold
   has_and_belongs_to_many :products
+  has_and_belongs_to_many :line_items
   
   before_save :set_active_field
 

@@ -16,6 +16,7 @@ class LineItem < ActiveRecord::Base
   belongs_to :order
   belongs_to :product
   belongs_to :cart
+  has_and_belongs_to_many :ingredients
 
   attr_accessible :product
 
