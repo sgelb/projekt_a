@@ -1,0 +1,2 @@
+module ExtraIngredientsHelper
+end

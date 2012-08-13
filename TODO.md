@@ -1,3 +1,10 @@
+individuelle pizzen einbauen
+- ingredient count
+- nice view in cart & order
+- create
+- destroy
+- edit
+
 bestellungen
 - status hinzufügen
 
@@ -5,8 +12,6 @@ zugangskontrolle
 - admin erstellen
 - zugänge für seiten setzen
 - menü je nach rolle anzeigen
-
-individuelle pizzen einbauen
 
 kleinklein & krimskrams
 - mehr tests!

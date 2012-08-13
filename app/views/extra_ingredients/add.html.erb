@@ -1,0 +1,22 @@
+<% provide(:title, 'Add extra ingredients') %>
+<h1>Add extra ingredients</h1> 
+
+<div>
+  <%= @product.title %>'s ingredients: 
+  <ul>
+    <% @product.ingredients.each do |item| %>
+      <li> <%= item.name %> </li>
+    <% end %>
+  </ul>
+</div>
+
+<!-- TODO: nice form with fancy checkboxes -->
+
+<div>
+  Add:
+  <ul>
+    <% @ingredients.each do |item| %>
+      <li> <%= item.name %> </li>
+    <% end %>
+  </ul>
+</div>
