@@ -28,4 +28,13 @@ class OrdersController < ApplicationController
     end
   end
 
+  def destroy
+    if Order.find_by_id(params[:id]).destroy
+      flash[:notice] = "Deleted order ##{params[:id]}"
+    else
+      flash[:error] = "Could not delete order ##{params[:id]}"
+    end
+    redirect_to orders_path
+  end
+
 end

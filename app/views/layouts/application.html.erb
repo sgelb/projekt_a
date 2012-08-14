@@ -17,12 +17,18 @@
         </div>
         <div class="container-fluid">
             <div class="row-fluid">
-                <div class="span8">
-                    <%= yield %>
-                </div>
-                <div class="span4 sidebar">
-                    <%= render @cart if controller_name == 'store' %>
-                </div>
+                <% if controller_name == 'store' %>
+                    <div class="span8">
+                        <%= yield %>
+                    </div>
+                    <div class="span4 sidebar">
+                        <%= render @cart %>
+                    </div>
+                <% else %>
+                    <div>
+                        <%= yield %>
+                    </div>
+                <% end %>
             </div>
         </div>
         <%= render 'layouts/footer' %>
