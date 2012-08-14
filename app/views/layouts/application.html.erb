@@ -17,10 +17,10 @@
         </div>
         <div class="container-fluid">
             <div class="row-fluid">
-                <div class="span9">
+                <div class="span8">
                     <%= yield %>
                 </div>
-                <div class="span3 sidebar">
+                <div class="span4 sidebar">
                     <%= render @cart if controller_name == 'store' %>
                 </div>
             </div>

@@ -3,6 +3,7 @@ class IngredientsLineItems < ActiveRecord::Migration
     create_table :ingredients_line_items, id: false do |t|
       t.integer :ingredient_id
       t.integer :line_item_id
+    end
   end
 
   def down

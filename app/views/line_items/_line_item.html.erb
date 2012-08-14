@@ -1,6 +1,11 @@
 <tr>
     <td> <%= line_item.product.title %> </td>
-    <td> <%= number_to_currency(line_item.product.price, unit: '€ ') %> </td>
+    <td> 
+        <% line_item.ingredients.each do |item| %> 
+            <%= item.name %><br>
+        <% end %>
+    </td>
+    <td> <%= number_to_currency(total_price([line_item]), unit: '€ ') %> </td>
     <td> <%= link_to 'Remove', line_item_path(line_item.product_id),
         data: { confirm: 'Are you sure?' }, method: :delete %> </td>
 </tr>

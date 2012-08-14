@@ -14,10 +14,11 @@ class OrdersController < ApplicationController
       # prevents item to be destroyed with the cart
       item.cart_id = nil
       @order.line_items << item
+      # FIXME: check for sufficient ingredients
     end
     if @order.save
       Cart.destroy(session[:cart_id])
-      decrease_ingredients_stock(@order.line_items)
+      decrease_ingredients_stock @order.line_items
       session[:cart_id] = nil
       flash[:notice] = "Thank you for your order"
       redirect_to store_path
@@ -25,15 +26,6 @@ class OrdersController < ApplicationController
       flash[:error] = "Could not place order."
       render action: 'new'
     end
-  end
-
-  def destroy
-    if Order.destroy(params[:id])
-      flash[:notice] = "Order deleted"
-    else
-      flash[:error] = "Could not delete order."
-    end
-      redirect_to orders_path
   end
 
 end

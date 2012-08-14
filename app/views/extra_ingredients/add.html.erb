@@ -10,13 +10,7 @@
   </ul>
 </div>
 
-<!-- TODO: nice form with fancy checkboxes -->
-
 <div>
   Add:
-  <ul>
-    <% @ingredients.each do |item| %>
-      <li> <%= item.name %> </li>
-    <% end %>
-  </ul>
+  <%= render 'form' %>
 </div>

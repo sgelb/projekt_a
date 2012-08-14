@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
 
   # decrease ingredients quantity after order is placed
   def decrease_ingredients_stock line_items
+    # FIXME: butt-ugly code. re-factor or die
     line_items.each do |item|
+      item.ingredients.each do |ingredient|
+        ingredient.update_column(:quantity, ingredient.quantity - 1)
+      end
       Product.find(item.product_id).ingredients.each do |ingredient|
         ingredient.update_column(:quantity, ingredient.quantity - 1)
         if ingredient.quantity == 0

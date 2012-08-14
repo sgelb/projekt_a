@@ -1,0 +1,13 @@
+<%= form_tag(controller: 'extra_ingredients', action: 'create') do %>
+    <div>
+        <% @ingredients.each do |i| %>
+            <%= check_box_tag "extra_ingredients[ingredient_ids][]", i.id %>
+            <%= i.name %>
+        <% end %>
+    </div>
+    <div>
+        <%= hidden_field_tag 'product_id', @product.id %>
+        <%= submit_tag("Add custom product to cart") %>
+    </div>
+<% end %>
+

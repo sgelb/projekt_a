@@ -1,9 +1,6 @@
 individuelle pizzen einbauen
-- ingredient count
-- nice view in cart & order
-- create
-- destroy
-- edit
+- nice view order
+- customer can edit custom products
 
 bestellungen
 - status hinzufügen
@@ -13,7 +10,8 @@ zugangskontrolle
 - zugänge für seiten setzen
 - menü je nach rolle anzeigen
 
-kleinklein & krimskrams
+kleinklein & krimskrams & auch nur eventuell
+- statusseite für admin
 - mehr tests!
 - in routes.rb :resources mittels only: beschränken
 - mehr DRY: partials für alles mögliche.

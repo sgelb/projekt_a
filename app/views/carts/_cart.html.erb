@@ -7,7 +7,9 @@
         <thead>
             <tr>
                 <th>Product</th>
+                <th>Extras</th>
                 <th>Price</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +17,7 @@
         </tbody>
         <tr>
             <td>Total price:</td> 
+            <td></td>
             <td> <%= number_to_currency(total_price(cart.line_items), unit: '€ ') %> </td>
             <td> <%= link_to 'Delete cart', cart,
                 data: { confirm: 'Are you sure?' }, method: :delete %> </td>

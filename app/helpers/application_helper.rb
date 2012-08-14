@@ -21,6 +21,9 @@ module ApplicationHelper
     total = 0
     line_items.each do |item|
       total += item.product.price
+      item.ingredients.each do |ingredient|
+        total += ingredient.price
+      end
     end
     total
   end
