@@ -20,9 +20,7 @@ class ExtraIngredientsController < ApplicationController
     @product = Product.find_by_id(params[:product_id])
     @line_item = @cart.line_items.build(product: @product)
 
-    # FIXME: error if no extra ingredient in params. why???
-    params[:extra_ingredients][:ingredient_ids] ||= []
-    @extra_ingredients = params[:extra_ingredients][:ingredient_ids]
+    @extra_ingredients = params[:ingredient_ids] ||= []
     @extra_ingredients.each do |item|
       @line_item.ingredients << Ingredient.find_by_id(item)
     end
