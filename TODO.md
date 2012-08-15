@@ -1,14 +1,10 @@
-individuelle pizzen einbauen
-- nice view order
-- customer can edit custom products
-
-bestellungen
-- status hinzufügen
-
 zugangskontrolle
 - admin erstellen
 - zugänge für seiten setzen
 - menü je nach rolle anzeigen
+
+bestellungen
+- statusfeld ("im ofen", "wird ausgeliefert", "ist ausgeliefert") etc hinzufügen
 
 kleinklein & krimskrams & auch nur eventuell
 - statusseite für admin

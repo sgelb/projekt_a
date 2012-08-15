@@ -21,14 +21,4 @@ class CartsController < ApplicationController
     redirect_to store_url
   end
 
-# TODO: implement edit/update of cart
-
-  def edit
-    @cart = current_cart
-  end
-
-  def update
-  end
-
-
 end

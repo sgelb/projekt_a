@@ -27,6 +27,7 @@
         <thead>
           <tr>
             <th>Product title</th>
+            <th>Extras</th>
             <th>Price</th>
             <th>Action</th>
           </tr>
@@ -35,6 +36,7 @@
           <%= render(order.line_items) %>
           <tr>
             <td><b>Total price:</b></th> 
+            <td></td>
             <td><b> <%= number_to_currency(total_price(order.line_items), unit: '€ ') %> </b></th>
             <td> <%= button_to 'Delete order', order, 
               data: { confirm: 'Are you sure?' }, method: :delete %> </td>

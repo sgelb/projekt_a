@@ -5,6 +5,7 @@ class ExtraIngredientsController < ApplicationController
 
     # user can only choose from ingredients that are not
     # already on the pizza
+    # TODO: re-factor
     @ingredients = Array.new
     Ingredient.all.each do |ingredient|
       if not ingredient.products.find_by_id(params[:id]) and ingredient.active?

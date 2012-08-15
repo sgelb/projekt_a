@@ -1,8 +1,12 @@
 <tr>
     <td> <%= line_item.product.title %> </td>
     <td> 
-        <% line_item.ingredients.each do |item| %> 
-            <%= item.name %><br>
+        <% if line_item.ingredients.any? %>
+            <% line_item.ingredients.each do |item| %> 
+                <%= item.name %><br>
+            <% end %>
+        <% else %>
+            –
         <% end %>
     </td>
     <td> <%= number_to_currency(total_price([line_item]), unit: '€ ') %> </td>
