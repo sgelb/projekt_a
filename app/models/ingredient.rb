@@ -42,7 +42,7 @@ class Ingredient < ActiveRecord::Base
 
   def set_active_field
     if self.quantity.zero?
-      self.active = 'false'
+      self.active = 0
     end
   end
 end
