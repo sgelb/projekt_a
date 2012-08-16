@@ -1,4 +1,5 @@
 class IngredientsController < ApplicationController
+  before_filter :login_required
 
   def index
     @ingredients = Ingredient.all

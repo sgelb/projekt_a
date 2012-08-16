@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_filter :login_required
 
   def index
     @products = Product.all
@@ -38,5 +39,6 @@ class ProductsController < ApplicationController
       render action: 'edit'
     end
   end
+
 
 end

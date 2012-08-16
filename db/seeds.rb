@@ -27,3 +27,5 @@ p1.save
 p2.save
 p3.save
 p4.save
+
+u = User.create({name: "test", password: "testtest", password_confirmation: "testtest"})

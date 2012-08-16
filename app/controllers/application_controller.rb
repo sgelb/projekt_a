@@ -1,7 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include SessionsHelper
 
   private
+  
+  # check if signed in user
+  def login_required
+    redirect_to store_path unless signed_in?
+  end
 
   # decrease ingredients quantity after order is placed
   def decrease_ingredients_stock line_items
