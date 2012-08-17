@@ -3,6 +3,8 @@ require 'spec_helper'
 describe IngredientsController do
 
   describe 'delete ingredient' do
+    let(:user) { FactoryGirl.create(:user) }
+    before { sign_in user }
 
     it "succeeds if ingredient is not part of product" do
       current_ingredient = FactoryGirl.create(:ingredient)

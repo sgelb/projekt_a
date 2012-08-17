@@ -11,12 +11,7 @@
                 <li><%= link_to "Orders", orders_path %></li>
                 <li><%= link_to "Sign out", signout_path, method: 'delete' %></li>
             <% elsif %>
-                <li>
-                <%= link_to signin_path do %>
-                    <%= content_tag :i, '', class: 'icon-star icon-white' %>
-                <% end %>
-
-                </li>
+                <li><%= link_to "Sign in", signin_path %></li>
             <% end %>
         </ul>
         </nav>

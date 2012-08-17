@@ -1,7 +1,9 @@
+FIXME:
+- login über /signin funktioniert in rspec nicht. warum?
+
+
 zugangskontrolle
-- admin erstellen
-- zugänge für seiten setzen
-- menü je nach rolle anzeigen
+- tests anpassen und schreiben!
 
 bestellungen
 - statusfeld ("im ofen", "wird ausgeliefert", "ist ausgeliefert") etc hinzufügen

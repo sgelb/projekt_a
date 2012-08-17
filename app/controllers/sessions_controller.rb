@@ -10,8 +10,8 @@ class SessionsController < ApplicationController
       flash[:notice] = "Hello #{user.name}!"
       redirect_to store_path
     else
-      flash.now[:error] = "Name and/or password incorrect!"
-      render 'new'
+      flash[:error] = "Name and/or password incorrect!"
+      redirect_to signin_path
     end
   end
 
