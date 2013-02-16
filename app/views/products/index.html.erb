@@ -1,14 +1,14 @@
 <% provide(:title, "Our products") %>
-<h1>Our products</h1>
+<h1>Unsere Produkte</h1>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Product title</th>
-            <th>Ingredients</th>
-            <th>Price</th>
-            <th>Active</th>
-            <th>Actions</th>
+            <th>Name</th>
+            <th>Zutaten</th>
+            <th>Preis</th>
+            <th>Aktiv</th>
+            <th>Aktion</th>
         </tr>
     </thead>
     <tbody>
@@ -16,4 +16,4 @@
     </tbody>
 </table>
 
-<%= button_to 'New product', new_product_path, method: :get %>
+<%= button_to 'Pizza hinzufügen', new_product_path, method: :get %>
