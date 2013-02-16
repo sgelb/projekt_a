@@ -33,7 +33,7 @@ class OrdersController < ApplicationController
 
   def destroy
     if Order.find_by_id(params[:id]).destroy
-      flash[:notice] = "Bestellung geköscht ##{params[:id]}"
+      flash[:notice] = "Bestellung gelöscht ##{params[:id]}"
     else
       flash[:error] = "Bestellung ##{params[:id]} kann nicht gelöscht werden"
     end
