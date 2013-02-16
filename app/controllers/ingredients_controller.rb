@@ -1,5 +1,5 @@
-cl# encoding: UTF-8ass 
-  IngredientsController < ApplicationController
+# encoding: UTF-8
+class IngredientsController < ApplicationController
   before_filter :login_required
 
   def index
@@ -48,5 +48,4 @@ cl# encoding: UTF-8ass
       render action: 'edit'
     end
   end
-
 end
