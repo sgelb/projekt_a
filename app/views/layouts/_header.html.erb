@@ -1,18 +1,14 @@
-<header class="navbar navbar-fixed-top">
+<header class="navbar">
 <div class="navbar-inner">
     <div class="container">
-        <%= link_to "Hin&Veg", store_path, id: "logo" %>
         <nav>
         <ul class="nav pull-right">
-            <% if signed_in? %>
                 <li class="divider-vertical"></li>
                 <li><%= link_to "Products", products_path %></li>
                 <li><%= link_to "Ingredients", ingredients_path %></li>
                 <li><%= link_to "Orders", orders_path %></li>
                 <li><%= link_to "Sign out", signout_path, method: 'delete' %></li>
-            <% elsif %>
                 <li><%= link_to "Sign in", signin_path %></li>
-            <% end %>
         </ul>
         </nav>
     </div>
