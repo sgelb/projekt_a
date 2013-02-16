@@ -1,1 +1,3 @@
-<li><%= link_to "Anmelden", signin_path %></li>
+<% if not signed_in? %>
+    <%= link_to "Anmelden", signin_path %>
+<% end %>
