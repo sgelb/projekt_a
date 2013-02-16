@@ -40,7 +40,7 @@ module ApplicationHelper
 
   # create full title
   def full_title(page_title)
-    base = "Hin & Veg"
+    base = "Veg damit"
     if page_title.empty?
       base
     else
