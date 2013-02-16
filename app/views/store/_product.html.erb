@@ -7,9 +7,14 @@
     </td>
     <td> <%= number_to_currency(product.price, unit: '€ ') %> </td>
     <% if has_only_active_ingredients?(product) %>
-        <td> <%= button_to 'Add extra toppings', 
-            add_extra_ingredient_path(id: product.id),
-            method: :get %> </td>
+        <% if has_active_extra_ingredients?(product.ingredients) %>
+            <td> <%= button_to 'Add extra toppings', 
+                add_extra_ingredient_path(id: product.id),
+                method: :get %> </td>
+        <% else %>
+            <td> No extra ingredients available </td>
+        <% end %>
+
         <td> <%= button_to 'Add to cart', line_items_path(product_id: product.id) %> </td>
     <% else %>
         <td></td>
