@@ -26,9 +26,9 @@ class ExtraIngredientsController < ApplicationController
     end
 
     if @line_item.save
-      flash[:success] = 'Added product w/ extra ingredients to cart!'
+      flash[:success] = 'Pizza mit extra Zutaten hinzugefügt'
     else
-      flash[:error] = 'Could not add product w/ extra ingredients to cart!'
+      flash[:error] = 'Pizza mit extra Zutaten nicht hinzugefügt!'
     end
     redirect_to store_url
   end

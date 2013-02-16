@@ -12,7 +12,7 @@ class IngredientsController < ApplicationController
   def create
     @ingredient = Ingredient.new(params[:ingredient])
     if @ingredient.save
-      flash[:success] = 'Saved new ingredient!'
+      flash[:success] = 'Neue Zutat!'
       redirect_to ingredients_path
     else
       render action: 'new'

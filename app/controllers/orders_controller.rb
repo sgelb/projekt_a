@@ -22,19 +22,19 @@ class OrdersController < ApplicationController
       Cart.destroy(session[:cart_id])
       decrease_ingredients_stock @order.line_items
       session[:cart_id] = nil
-      flash[:notice] = "Thank you for your order"
+      flash[:notice] = "Bestellung wird bearbeitet"
       redirect_to store_path
     else
-      flash[:error] = "Could not place order."
+      flash[:error] = "Bestellung ungültig"
       render action: 'new'
     end
   end
 
   def destroy
     if Order.find_by_id(params[:id]).destroy
-      flash[:notice] = "Deleted order ##{params[:id]}"
+      flash[:notice] = "Bestellung geköscht ##{params[:id]}"
     else
-      flash[:error] = "Could not delete order ##{params[:id]}"
+      flash[:error] = "Bestellung ##{params[:id]} kann nicht gelöscht werden"
     end
     redirect_to orders_path
   end

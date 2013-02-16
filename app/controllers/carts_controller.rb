@@ -8,7 +8,7 @@ class CartsController < ApplicationController
     else
       # either this cart does not exist. or we lie and we found a cart,
       # but it's not this user's.
-      flash[:error] = 'Cart not found'
+      flash[:error] = 'Bestellung nicht gefunden'
       redirect_to store_url
     end
   end
@@ -17,7 +17,7 @@ class CartsController < ApplicationController
     current_cart.line_items.each do |item|
       item.destroy
     end
-    flash[:success] = 'Cart deleted'
+    flash[:success] = 'Bestellung entfernt'
     redirect_to store_url
   end
 
