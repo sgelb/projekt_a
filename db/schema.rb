@@ -18,17 +18,6 @@ ActiveRecord::Schema.define(:version => 20130216140034) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "custom_products", :force => true do |t|
-    t.decimal  "total_price", :precision => 7, :scale => 2
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
-  end
-
-  create_table "custom_products_ingredients", :id => false, :force => true do |t|
-    t.integer "custom_product_id"
-    t.integer "ingredient_id"
-  end
-
   create_table "ingredients", :force => true do |t|
     t.string   "name"
     t.integer  "quantity"
