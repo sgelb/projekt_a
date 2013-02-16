@@ -1,5 +1,5 @@
-<% provide(:title, "all orders") %>
-<h1>All orders</h1>
+<% provide(:title, "Bestellungen") %>
+<h1>Bestellungen</h1>
 
 <% if @orders.empty? %>
   <div>There are no orders.</div>
@@ -26,10 +26,10 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Product title</th>
+            <th>Pizza</th>
             <th>Extras</th>
-            <th>Price</th>
-            <th>Action</th>
+            <th>Preis</th>
+            <th>Aktion</th>
           </tr>
         </thead>
         <tbody>
@@ -38,8 +38,8 @@
             <td><b>Total price:</b></th> 
             <td></td>
             <td><b> <%= number_to_currency(total_price(order.line_items), unit: '€ ') %> </b></th>
-            <td> <%= button_to 'Delete order', order, 
-              data: { confirm: 'Are you sure?' }, method: :delete %> </td>
+            <td> <%= button_to 'löschen', order, 
+              data: { confirm: 'sicher?' }, method: :delete %> </td>
           </tr>
         </tbody>
       </table>
