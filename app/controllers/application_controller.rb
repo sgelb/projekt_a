@@ -12,13 +12,11 @@ class ApplicationController < ActionController::Base
   # decrease ingredients quantity after order is placed
   def decrease_ingredients_stock line_items
     line_items.each do |item|
-      @ingredient_list = item.ingredients + 
-        Product.find(item.product_id).ingredients
-    end
-    @ingredient_list.each do |ingredient|
-      ingredient.update_column(:quantity, ingredient.quantity - 1)
-      if ingredient.quantity == 0
-        ingredient.update_column(:active, 0)
+      (item.ingredients + Product.find(item.product_id).ingredients).each do |ingredient|
+        ingredient.update_column(:quantity, ingredient.quantity - 1)
+        if ingredient.quantity == 0
+          ingredient.update_column(:active, 0)
+        end
       end
     end
   end
