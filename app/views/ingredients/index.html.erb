@@ -1,15 +1,15 @@
-<% provide(:title, "Our ingredients") %>
-<h1>Our ingredients</h1>
+<% provide(:title, "Zutaten") %>
+<h1>Zutaten</h1>
 
 
 <table class="table">
   <thead>
     <tr>
-        <th>Ingredient name</th>
-        <th>Quantity (Threshold)</th>
-        <th>Price</th>
-        <th>Active</th>
-        <th>Actions</th>
+        <th>Name</th>
+        <th>Menge</th>
+        <th>Preis</th>
+        <th>Aktiv</th>
+        <th>Aktion</th>
     </tr>
   </thead>
   <tbody>
@@ -17,5 +17,5 @@
   </tbody>
 </table>
 
-<%= button_to 'New ingredient', new_ingredient_path, method: :get %>
+<%= button_to 'Zutat hinzufügen', new_ingredient_path, method: :get %>
 
