@@ -11,10 +11,10 @@ i2 = Ingredient.create({name:"Spinach", quantity:"4", price:"2.11", active: 0, t
 i3 = Ingredient.create({name:"Fake Cheese", quantity:"12", price:"3.11", active: 1, threshold: 20})
 i4 = Ingredient.create({name:"Mushrooms", quantity:"0", price:"1.11", active: 1, threshold: 10})
 
-p1 = Product.new({title:"Margeritha", price:"1.23"})
-p2 = Product.new({title:"Funghi", price:"3.23"})
-p3 = Product.new({title:"Montanero", price:"5.54"})
-p4 = Product.new({title:"Spinach", price:"9.99"})
+p1 = Product.new({title:"Margeritha", price:"1.23", pic_url:"pizzas/pizza01.jpg"})
+p2 = Product.new({title:"Funghi", price:"3.23", pic_url:"pizzas/pizza02.jpg"})
+p3 = Product.new({title:"Montanero", price:"5.54", pic_url:"pizzas/pizza03.jpg"})
+p4 = Product.new({title:"Spinach", price:"9.99", pic_url:"pizzas/pizza04.jpg"})
 
 p1.ingredients << i1
 p1.ingredients << i3

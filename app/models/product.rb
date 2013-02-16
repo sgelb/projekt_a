@@ -13,7 +13,7 @@ class Product < ActiveRecord::Base
   default_scope order: 'title'
   has_many :line_items
   has_and_belongs_to_many :ingredients
-  attr_accessible :price, :title, :ingredients, :ingredient_ids
+  attr_accessible :price, :title, :ingredients, :ingredient_ids, :pic_url
 
   # we don't want empty fields
   validates :title, :price, presence: true
