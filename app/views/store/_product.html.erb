@@ -12,12 +12,12 @@
                 add_extra_ingredient_path(id: product.id),
                 method: :get %> </td>
         <% else %>
-            <td> No extra ingredients available </td>
+            <td> keine extra Zutaten </td>
         <% end %>
 
         <td> <%= button_to 'hinzufügen', line_items_path(product_id: product.id) %> </td>
     <% else %>
         <td></td>
-        <td> Product currently not available </td>
+        <td> Produkt nicht verfügbar </td>
     <% end %>
 </tr>

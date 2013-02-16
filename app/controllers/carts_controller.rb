@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class CartsController < ApplicationController
 
   def show

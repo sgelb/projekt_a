@@ -1,4 +1,5 @@
-class IngredientsController < ApplicationController
+cl# encoding: UTF-8ass 
+  IngredientsController < ApplicationController
   before_filter :login_required
 
   def index

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class ProductsController < ApplicationController
   before_filter :login_required
 

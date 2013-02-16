@@ -1,7 +1,7 @@
 <h2>Bestellung</h2>
 
 <% if cart.line_items.empty? %>
-    <div>is empty. Choose a pizza!</div>
+    <div>Dein Warenkorb ist leer</div>
 <% else %>
     <table class="table table-condensed">
         <thead>
@@ -16,7 +16,7 @@
             <%= render(cart.line_items) %>
         </tbody>
         <tr>
-            <td>Total price:</td> 
+            <td>Summe:</td> 
             <td></td>
             <td> <%= number_to_currency(total_price(cart.line_items), unit: '€ ') %> </td>
             <td> <%= link_to 'Löschen', cart,
