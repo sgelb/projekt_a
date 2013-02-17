@@ -1,4 +1,4 @@
-<h2>Bestellung</h2>
+<h3>Warenkorb</h3>
 
 <% if cart.line_items.empty? %>
     <div>Dein Warenkorb ist leer</div>
@@ -19,7 +19,7 @@
             <td>Summe:</td> 
             <td></td>
             <td> <%= number_to_currency(total_price(cart.line_items), unit: '€ ') %> </td>
-            <td> <%= link_to 'Löschen', cart,
+            <td> <%= link_to 'Bestellung löschen', cart,
                 data: { confirm: 'Sicher?' }, method: :delete %> </td>
         </tr>
     </table>
