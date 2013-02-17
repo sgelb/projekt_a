@@ -7,6 +7,7 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
+    	
     	<div class="container">
         	<%= link_to image_tag("header_03.jpg", :alt => "veg damit!"), store_path %>
         	<% if signed_in? %>
@@ -28,6 +29,8 @@
                     	</div>
                     	<div class="span4 sidebar">
                         	<%= render @cart %>
+                        	<%= render  'layouts/contact_address'%>
+                    
                     	</div>
                 	<% else %>
                     	<div>
