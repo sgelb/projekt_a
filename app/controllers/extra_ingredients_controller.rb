@@ -6,7 +6,6 @@ class ExtraIngredientsController < ApplicationController
 
     # user can only choose from ingredients that are not
     # already on the pizza
-    # TODO: re-factor
     @ingredients = Array.new
     Ingredient.all.each do |ingredient|
       if not ingredient.products.find_by_id(params[:id]) and ingredient.active?
@@ -27,6 +26,7 @@ class ExtraIngredientsController < ApplicationController
     end
 
     if @line_item.save
+      decrease_ingredients_stock [@line_item]
       flash[:success] = 'Pizza mit extra Zutaten hinzugefügt'
     else
       flash[:error] = 'Pizza mit extra Zutaten nicht hinzugefügt!'
