@@ -1,13 +1,19 @@
 <%= form_tag(controller: 'extra_ingredients', action: 'create') do %>
-    <div>
-        <% @ingredients.each do |i| %>
-            <%= check_box_tag "ingredient_ids[]", i.id %>
-            <%= i.name %>
-        <% end %>
-    </div>
-    <div>
-        <%= hidden_field_tag 'product_id', @product.id %>
-        <%= submit_tag("Belag hinzufügen") %>
-    </div>
+    <% (0..@ingredients.length).step(4)  do |n| %>
+        <td>
+            <% (n..n+3).each do |i| %>
+                <% ingredient = @ingredients[i] %>
+                <% if !ingredient.nil? %>
+                    <%= check_box_tag "ingredient_ids[]", ingredient.id %>
+                    <%= ingredient.name %> <%= number_to_currency(ingredient.price, unit: '€ ')%> 
+                <% else %>
+                    <%= submit_tag("Belag hinzufügen") %>
+                    <%= hidden_field_tag 'product_id', @product.id %>
+                    <% break %>
+                <% end %>
+                <br>
+            <% end %>
+        </td>
+    <% end %>
 <% end %>
 

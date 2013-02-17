@@ -13,6 +13,7 @@
 #
 
 class Ingredient < ActiveRecord::Base
+  default_scope order: 'name'
   attr_accessible :name, :price, :quantity, :active, :threshold
   has_and_belongs_to_many :products
   has_and_belongs_to_many :line_items
