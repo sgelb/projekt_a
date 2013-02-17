@@ -6,26 +6,16 @@ html {
 }
 
 body {
-  padding-top: 10px;
+  padding-top: 1em;
 }
 
 
 /* header */
 
 #logo {
-  float: left;
-  margin-right: 2em;
-  font-size: 1.7em;
-  color: #fff;
-  padding-top: 9px;
-  font-weight: bold;
-  letter-spacing: -1px;
+  padding-bottom: 1em;
 }
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
 
 /* highlight inactive table fields */
 .active-false {
