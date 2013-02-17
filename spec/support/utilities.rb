@@ -4,7 +4,7 @@ def sign_in(user)
   visit signin_path
   fill_in "Name", with: user.name
   fill_in "Password", with: user.password
-  click_button "Sign in"
+  click_button "Anmelden"
   cookies[:remember_token] = user.remember_token
 end
 
