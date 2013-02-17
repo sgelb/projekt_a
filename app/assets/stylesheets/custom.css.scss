@@ -31,6 +31,11 @@ body {
   border-bottom: solid 3px #000000;
 }
 
+.table td,
+.table th {
+    padding-left: 0;
+}
+
 #ingredient_ids_ {
     vertical-align: middle;
     text-align: center;
