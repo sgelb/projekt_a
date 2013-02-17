@@ -9,32 +9,34 @@
     <body>
     	<div class="container">
         	<%= link_to image_tag("header_03.jpg", :alt => "veg damit!"), store_path %>
-		</div>
-        <% if signed_in? %>
-            <%= render 'layouts/header' %>
-        <% end %>
-        <div>
-            <% flash.each do |key, msg| %>
-                <div class="alert alert-<%= key %>">
-                    <%= msg %> 
-                </div>
-            <% end %>
-        </div> 
-        <div class="container">
-            <div class="row-fluid">
-                <% if controller_name == 'store' %>
-                    <div class="span8">
-                        <%= yield %>
-                    </div>
-                    <div class="span4 sidebar">
-                        <%= render @cart %>
-                    </div>
-                <% else %>
-                    <div>
-                        <%= yield %>
-                    </div>
-                <% end %>
-            </div>
+		
+        	<% if signed_in? %>
+            	<%= render 'layouts/header' %>
+        	<% end %>
+        	<div>
+            	<% flash.each do |key, msg| %>
+                	<div class="alert alert-<%= key %>">
+                    	<%= msg %> 
+                	</div>
+            	<% end %>
+        	</div> 
+        
+        	<div class="container">
+            	<div class="row-fluid">
+                	<% if controller_name == 'store' %>
+                    	<div class="span8">
+                        	<%= yield %>
+                    	</div>
+                    	<div class="span4 sidebar">
+                        	<%= render @cart %>
+                    	</div>
+                	<% else %>
+                    	<div>
+                        	<%= yield %>
+                    	</div>
+                	<% end %>
+            	</div>
+        	</div>
         </div>
         <%= render 'layouts/footer' %>
         <%= debug(params) if Rails.env.development? %>
