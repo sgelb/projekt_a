@@ -1,12 +1,14 @@
-<tr>
+<tr >
     <td>
         <h4><%= product.title %> </br></h4>
         <%= image_tag product.pic_url %>
     </td>
     <td>
-        <% product.ingredients.each do |i| %>
-            <%= i.name %><br>
-        <% end %>
+    	<ul>
+        	<% product.ingredients.each do |i| %>
+            	<li> <%= i.name %><br> </li>
+        	<% end %>
+        </ul>
     </td>
     <td> <%= number_to_currency(product.price, unit: '€') %> </td>
     <% if (has_only_active_ingredients?(product) && product.active) %>
@@ -22,3 +24,5 @@
         <td> Produkt nicht verfügbar </td>
     <% end %>
 </tr>
+
+
