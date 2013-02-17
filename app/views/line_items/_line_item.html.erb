@@ -10,6 +10,6 @@
         <% end %>
     </td>
     <td> <%= number_to_currency(total_price([line_item]), unit: '€ ') %> </td>
-    <td> <%= link_to 'Entfernen', line_item_path(line_item.product_id),
+    <td> <%= link_to image_tag("icons/minus.png", :size => "14x14"), line_item_path(line_item.product_id),
         data: { confirm: 'Sicher?' }, method: :delete %> </td>
 </tr>
