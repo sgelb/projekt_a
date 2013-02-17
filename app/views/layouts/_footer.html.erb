@@ -1,3 +1,6 @@
-<% if not signed_in? %>
-    <%= link_to "Anmelden", signin_path %>
-<% end %>
+<p style="text-align: center"> 
+	<strong>Veg Damit! </strong>Feldstraße 66 | 20359 Hamburg | Tel.: +49 40234654 | Mail: <a href="mailto:#">info@VegDamit.de</a>
+	<% if not signed_in? %>
+    	<%= link_to image_tag("icons/keys.png", :size=>"14x14"), signin_path %>
+	<% end %>
+</p>

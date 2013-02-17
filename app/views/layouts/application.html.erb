@@ -6,9 +6,8 @@
         <%= javascript_include_tag "application" %>
         <%= csrf_meta_tags %>
     </head>
-    <body>
-    	
-    	<div class="container">
+    <body style="background-color: #FFFFFF">
+    	<div class="container" style="background-color: #FFFFFF">
         	<%= link_to image_tag("header_03.jpg", :alt => "veg damit!"), store_path %>
         	<% if signed_in? %>
             	<%= render 'layouts/header' %>
@@ -40,8 +39,9 @@
             	</div>
         	</div>
         	<%= render 'layouts/footer' %>
-        </div>
+        
         
         <%= debug(params) if Rails.env.development? %>
+        </div>
     </body>
 </html>
