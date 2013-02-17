@@ -1,5 +1,8 @@
 <tr>
-    <td> <%= product.title %> </td>
+    <td>
+        <%= product.title %>
+        <%= image_tag product.pic_url %>
+    </td>
     <td>
         <% product.ingredients.each do |i| %>
             <%= i.name %><br>
