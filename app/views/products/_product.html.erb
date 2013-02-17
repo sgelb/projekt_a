@@ -1,5 +1,8 @@
 <tr>
-    <td> <%= product.title %> </td>
+    <td> 
+        <%= product.title %> </br>
+        <%= image_tag product.pic_url %>
+    </td>
     <td>
         <% product.ingredients.each do |i| %>
             <div class="small-amount-<%= small_amount?(i.quantity, i.threshold) %>">
