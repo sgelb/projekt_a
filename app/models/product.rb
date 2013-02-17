@@ -13,7 +13,7 @@ class Product < ActiveRecord::Base
   default_scope order: 'title'
   has_many :line_items
   has_and_belongs_to_many :ingredients
-  attr_accessible :price, :title, :ingredients, :ingredient_ids, :pic_url
+  attr_accessible :price, :title, :ingredients, :ingredient_ids, :pic_url, :active
 
   # we don't want empty fields
   validates :title, :price, presence: true
@@ -30,7 +30,7 @@ class Product < ActiveRecord::Base
 
   def must_have_ingredient
     if ingredients.empty?
-      self.errors[:base] << "At least one ingredient has to be checked"
+      self.errors[:base] << "Eine Pizza muss mindestens eine Zutat enthalten."
     end
   end
 

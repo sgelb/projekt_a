@@ -11,8 +11,8 @@
         <% end %>
     </td>
     <td> <%= number_to_currency(product.price, unit: '€ ') %> </td>
-    <td class="active-<%= has_only_active_ingredients?(product) %>">
-        <%= has_only_active_ingredients?(product) %>
+    <td class="active-<%= (has_only_active_ingredients?(product) && product.active) %>">
+        <%= (has_only_active_ingredients?(product) && product.active) %>
     </td>
     <td> <%= link_to 'Editieren', edit_product_path(product) %> </td>
     <td> <%= link_to 'Löschen', product, 

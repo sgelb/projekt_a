@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     if @product.save
-      flash[:success] = 'gespeichert'
+      flash[:success] = 'Produkt gespeichert'
       redirect_to products_path
     else
       render action: 'new'
@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
     params[:product][:ingredient_ids] ||= []
     @product = Product.find(params[:id])
     if @product.update_attributes(params[:product])
-      flash[:success] = 'gespeichert'
+      flash[:success] = 'Produktänderungen gespeichert'
       redirect_to products_path
     else
       render action: 'edit'
