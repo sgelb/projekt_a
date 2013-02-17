@@ -10,7 +10,7 @@
             </div>
         <% end %>
     </td>
-    <td> <%= number_to_currency(product.price, unit: '€ ') %> </td>
+    <td> <%= number_to_currency(product.price, unit: '€') %> </td>
     <td class="active-<%= (has_only_active_ingredients?(product) && product.active) %>">
         <%= (has_only_active_ingredients?(product) && product.active) %>
     </td>

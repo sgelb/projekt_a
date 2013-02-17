@@ -3,7 +3,7 @@
     <td class="small-amount-<%=small_amount?(ingredient.quantity, ingredient.threshold)%>"> 
         <%= ingredient.quantity %> (<%= ingredient.threshold %>)
     </td>
-    <td> <%= number_to_currency(ingredient.price, unit: '€ ') %> </td>
+    <td> <%= number_to_currency(ingredient.price, unit: '€') %> </td>
     <td class="active-<%=ingredient.active%>"> <%= ingredient.active? %> </td>
     <td> <%= link_to 'Editieren', edit_ingredient_path(ingredient) %> </td>
     <td> <%= link_to 'Löschen', ingredient, 
