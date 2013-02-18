@@ -3,11 +3,17 @@
 <h1>Admin Anmeldung</h1>
 
 <%= form_for(:session, url: sessions_path) do |f| %>
+  <div>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  </div>
 
+  <div>
   <%= f.label :password %>
   <%= f.password_field :password %>
+  </div>
 
+  <div>
   <%= f.submit "Anmelden", class: "btn" %>
+  </div>
 <% end %>

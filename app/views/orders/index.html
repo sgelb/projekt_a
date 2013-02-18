@@ -35,11 +35,11 @@
         <tbody>
           <%= render(order.line_items) %>
           <tr>
-            <td><b>Summe::</b></th> 
+            <td><b>Summe:</b></th> 
             <td></td>
             <td><b> <%= number_to_currency(total_price(order.line_items), unit: '€') %> </b></th>
             <td> <%= button_to 'löschen', order, 
-              data: { confirm: 'sicher?' }, method: :delete %> </td>
+              data: { confirm: 'Sicher?' }, method: :delete, class: "btn" %> </td>
           </tr>
         </tbody>
       </table>
