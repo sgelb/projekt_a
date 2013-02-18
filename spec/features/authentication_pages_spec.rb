@@ -11,7 +11,6 @@ describe 'Authentication' do
       before { click_button "Anmelden" }
       it { should have_selector('div.alert.alert-error', text: 'Name und') }
       it { should have_button('Anmelden') }
-      it { should have_link('Anmelden', href: signin_path) }
       it { should_not have_link('Abmelden', href: signout_path) }
     end
   end
