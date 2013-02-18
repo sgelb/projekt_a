@@ -1,3 +1,4 @@
+# encoding: utf-8
 <% if @product.errors.any? %>
   <div>
     <h2><%= pluralize(@product.errors.count, "error") %> </h2>
@@ -27,13 +28,14 @@
   </div>
 
   <div>
-    <% Ingredient.all.each do |i| %>
-      <%= check_box_tag "product[ingredient_ids][]", i.id, 
-        @product.ingredients.include?(i) %>
-        <%= i.name %>
+      <% Ingredient.all.each do |i| %>
+          <%= check_box_tag "product[ingredient_ids][]", 
+              i.id, @product.ingredients.include?(i) %>
+          <%= i.name %>
       <% end %>
-    </div>
+  </div>
+
   <div>
-    <%= f.submit %>
+    <%= f.submit "Speichern", class: "btn" %>
   </div>
 <% end %>
