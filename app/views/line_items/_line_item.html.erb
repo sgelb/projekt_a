@@ -10,6 +10,10 @@
         <% end %>
     </td>
     <td> <%= number_to_currency(total_price([line_item]), unit: '€') %> </td>
-    <td> <%= link_to 'Entfernen', line_item_path(line_item.product_id),
-        data: { confirm: 'Sicher?' }, method: :delete %> </td>
+    <td>
+        <% if not current_page?(orders_path) %>
+            <%= link_to 'Entfernen', line_item_path(line_item.product_id),
+                data: { confirm: 'Sicher?' }, method: :delete %>
+            <% end %>
+    </td>
 </tr>
