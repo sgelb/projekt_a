@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
       (item.ingredients + Product.find(item.product_id).ingredients).each do |ingredient|
         ingredient.update_column(:quantity, ingredient.quantity - 1)
         if ingredient.quantity == 0
-          ingredient.update_column(:active, 0)
+          ingredient.update_column(:active, false)
         end
       end
     end
@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
       (item.ingredients + Product.find(item.product_id).ingredients).each do |ingredient|
         ingredient.update_column(:quantity, ingredient.quantity + 1)
         if ingredient.quantity != 0
-          ingredient.update_column(:active, 1)
+          ingredient.update_column(:active, true)
         end
       end
     end
