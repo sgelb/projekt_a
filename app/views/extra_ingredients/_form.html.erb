@@ -7,7 +7,7 @@
                     <%= check_box_tag "ingredient_ids[]", ingredient.id %>
                     <%= ingredient.name %> <%= number_to_currency(ingredient.price, unit: '€')%> 
                 <% else %>
-                    <%= submit_tag("Belag hinzufügen") %>
+                    <%= submit_tag "Belag hinzufügen", class: "btn" %>
                     <%= hidden_field_tag 'product_id', @product.id %>
                     <% break %>
                 <% end %>
