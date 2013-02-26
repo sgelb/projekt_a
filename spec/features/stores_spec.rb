@@ -9,7 +9,7 @@ describe "Store Pages" do
   describe "store page" do
     it { should have_css('h4', text:'Unser Angebot') }
     it { should have_css('title', 'Veg damit | Übersicht') }
-    it { should have_css('td', text:'Firenze') }
+    it { should have_css('h4', text:'Firenze') }
     it { should have_button('+ Pizza') }
   end
 

@@ -6,6 +6,6 @@ FactoryGirl.define do
     i.sequence(:quantity) { |n| "#{n}" }
     i.sequence(:threshold) { |n| "#{n}" }
     i.sequence(:price) { |n| "#{n}.89" }
-    i.active 1
+    i.active true
   end
 end
