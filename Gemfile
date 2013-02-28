@@ -15,6 +15,7 @@ group :development, :test do
     gem 'sqlite3'
     gem 'rspec-rails'
     gem 'railroady'
+    gem 'debugger'
 end
 
 group :development do
